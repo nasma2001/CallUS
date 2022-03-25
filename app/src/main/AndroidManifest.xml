@@ -16,10 +16,10 @@
             android:name=".VerifyVCode"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SendVCode"
             android:exported="true" />
         <activity
-            android:name=".SendVCode"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

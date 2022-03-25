@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@id/enterPhone"/>
    <LinearLayout
        android:id="@+id/linearPhone"
-       android:layout_width="wrap_content"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="horizontal"
        android:layout_marginTop="70dp"
@@ -46,6 +46,8 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:textSize="18sp"
+           android:layout_marginStart="20dp"
+           android:layout_gravity="center"
            android:textStyle="bold"
            android:textColor="@color/backgroundColor"
            android:text="+972"/>
@@ -54,7 +56,9 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:hint="@string/TextNumberHint"
-           android:textColorHint="@color/backgroundColor"
+           android:layout_gravity="center"
+           android:textColorHint="#883D6D79"
+           android:background="@drawable/bg_edit_text"
            android:textColor="@color/backgroundColor"
            android:layout_marginHorizontal="15dp"
            android:inputType="number"

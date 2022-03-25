@@ -68,6 +68,7 @@
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/backgroundColor"
+            android:background="@drawable/bg_edit_text"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="LabelFor" />
@@ -83,6 +84,7 @@
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/backgroundColor"
+            android:background="@drawable/bg_edit_text"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="LabelFor" />
@@ -98,6 +100,7 @@
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/backgroundColor"
+            android:background="@drawable/bg_edit_text"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="LabelFor" />
@@ -113,6 +116,7 @@
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/backgroundColor"
+            android:background="@drawable/bg_edit_text"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="LabelFor" />
@@ -128,6 +132,7 @@
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/backgroundColor"
+            android:background="@drawable/bg_edit_text"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="LabelFor" />
@@ -143,6 +148,7 @@
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/backgroundColor"
+            android:background="@drawable/bg_edit_text"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="LabelFor" />
