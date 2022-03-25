@@ -13,6 +13,12 @@
     <string name="DontRecieve" translatable="false">لم يصلك رمز التحقق؟</string>
     <string name="resend" translatable="false">اعادة الإرسال</string>
     <string name="verify" translatable="false">التحقق</string>
+    <string name="Welcome" translatable="false">اهلا بك</string>
+    <string name="ChooseASavedPlace" translatable="false">Choose a Saved Place</string>
+
+
+
+
 
 
 
