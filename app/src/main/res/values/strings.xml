@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">CallUS</string>
+
+    //texts for entering phone number for registration
+    <string name="welcomeToAddNumber" translatable="false">Enter your mobile number</string>
+    <string name="explainToAddNumber" translatable="false">Your number will be stored or used as a contact
+    method after the first time you register and agree to our terms and conditions and privacy policy</string>
+    <string name="TextNumberHint" translatable="false"> what is your number?</string>
+    <string name="ButtonphoneContinue" translatable="false">Continue</string>
+    <string name="VerificationCode" translatable="false">Enter verification code</string>
+    <string name="phoneSent" translatable="false">Verification code has been sent to</string>
+    <string name="DontRecieve" translatable="false">Don\'t receive verification code? </string>
+    <string name="resend" translatable="false">Resend</string>
+    <string name="verify" translatable="false">Verify</string>
 </resources>
