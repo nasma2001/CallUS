@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    SharedPreferences sharedPreferences;
-    String checkTheFirstTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,17 +17,15 @@ public class MainActivity extends AppCompatActivity {
         checkIfTheFirstTime();
 
     }
+
     private void checkIfTheFirstTime(){
-        sharedPreferences = getSharedPreferences("pref",MODE_PRIVATE);
-        checkTheFirstTime = sharedPreferences.getString("installForTheFirstTime","");
-        if (checkTheFirstTime.equals("yes")){
-            Intent i = new Intent(this,SendVCode.class);
-            startActivity(i);
-        }
-        else {
-            SharedPreferences.Editor edit = sharedPreferences.edit();
-            edit.putString("installForTheFirstTime","yes");
-            edit.apply();
-        }
+        boolean firstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getBoolean("firstRun", true);
+
+        if (firstRun) // first install the app
+            startActivity(new Intent(MainActivity.this, SendVCode.class));
+
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putBoolean("firstRun", false).apply();
     }
 }
