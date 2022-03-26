@@ -12,4 +12,12 @@
     <string name="DontRecieve" translatable="false">Don\'t receive verification code? </string>
     <string name="resend" translatable="false">Resend</string>
     <string name="verify" translatable="false">Verify</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="Welcome" translatable="false">Welcome</string>
+    <string name="ChooseASavedPlace" translatable="false">اختر مكانًا محفوظًا</string>
+    <string name="SetdestinationOnMap" translatable="false">تعيين الوجهة على الخريطة</string>
+
+
+
 </resources>
