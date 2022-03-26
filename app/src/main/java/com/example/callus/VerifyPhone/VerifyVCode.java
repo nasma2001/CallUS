@@ -1,4 +1,4 @@
-package com.example.callus;
+package com.example.callus.VerifyPhone;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -15,12 +15,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.callus.MainActivity;
+import com.example.callus.R;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
-
-import java.util.concurrent.TimeUnit;
 
 public class VerifyVCode extends AppCompatActivity {
     private EditText code1,code2,code3,code4,code5,code6;
@@ -106,8 +106,8 @@ public class VerifyVCode extends AppCompatActivity {
                     btnVerify.setVisibility(View.VISIBLE);
                     if (task.isSuccessful()){
                         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(this,MainActivity.class);
-                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        Intent i = new Intent(this, MainActivity.class);
+//                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(i);
                     }
                     else

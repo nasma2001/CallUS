@@ -3,20 +3,19 @@
     <string name="app_name">اتصل</string>
 
     //texts for entering phone number for registration
-    <string name="welcomeToAddNumber" translatable="false">أدخل رَقمك </string>
-    <string name="explainToAddNumber" translatable="false">سيتم تخزين رقمك او استخدامه كطريقة تواصل حال تسجيلك
+    <string name="welcomeToAddNumber">أدخل رَقمك </string>
+    <string name="explainToAddNumber">سيتم تخزين رقمك او استخدامه كطريقة تواصل حال تسجيلك
     للمرة الأولى وموافقتك على الشروط والأحكام وسياسة الخصوصية الخاصة بنا</string>
-    <string name="TextNumberHint" translatable="false"> ما هو رقمك؟</string>
-    <string name="ButtonphoneContinue" translatable="false">المتابعة</string>
-    <string name="VerificationCode" translatable="false">أدخل رمز التحقق</string>
-    <string name="phoneSent" translatable="false">تم إرسال رمز التحقق إلى</string>
-    <string name="DontRecieve" translatable="false">لم يصلك رمز التحقق؟</string>
-    <string name="resend" translatable="false">اعادة الإرسال</string>
-    <string name="verify" translatable="false">التحقق</string>
-    <string name="Welcome" translatable="false">اهلا بك</string>
-    <string name="ChooseASavedPlace" translatable="false">Choose a Saved Place</string>
-
-
+    <string name="TextNumberHint" > ما هو رقمك؟</string>
+    <string name="ButtonPhoneContinue">المتابعة</string>
+    <string name="VerificationCode">أدخل رمز التحقق</string>
+    <string name="phoneSent" >تم إرسال رمز التحقق إلى</string>
+    <string name="DontRecieve">لم يصلك رمز التحقق؟</string>
+    <string name="resend">اعادة الإرسال</string>
+    <string name="verify">التحقق</string>
+    <string name="Welcome" >أهلاً بك</string>
+    <string name="ChooseASavedPlace" translatable="false">اختر مكانًا محفوظًا</string>
+    <string name="setDestination">حدد وجهتك على الخريطة</string>
 
 
 

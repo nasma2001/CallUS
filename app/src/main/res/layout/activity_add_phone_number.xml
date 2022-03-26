@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grayLines"
-    tools:context=".SendVCode">
+    tools:context=".VerifyPhone.SendVCode">
 
     <TextView
         android:id="@+id/enterPhone"
@@ -76,7 +76,7 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:layout_marginHorizontal="15dp"
-           android:text="@string/ButtonphoneContinue"
+           android:text="@string/ButtonPhoneContinue"
            android:textAllCaps="false"
            android:padding="10dp"
            android:textStyle="bold"

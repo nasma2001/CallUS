@@ -16,10 +16,10 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".VerifyVCode"
+            android:name=".VerifyPhone.VerifyVCode"
             android:exported="true" />
         <activity
-            android:name=".SendVCode"
+            android:name=".VerifyPhone.SendVCode"
             android:exported="true" />
         <activity
             android:name=".SplashScreen"

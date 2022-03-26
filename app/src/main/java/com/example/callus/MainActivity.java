@@ -1,42 +1,35 @@
 package com.example.callus;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Button;
+
+import com.example.callus.ReusableFunctions.ReusableFunctions;
+import com.example.callus.VerifyPhone.SendVCode;
 
 public class MainActivity extends AppCompatActivity {
-    SharedPreferences sharedPreferences;
-    String checkTheFirstTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        PlanFragment planFragment = new PlanFragment();
-        ft.replace(R.id.flContainer, planFragment);
-        ft.addToBackStack(null);
-        ft.commit();
 
+        //check if the first time installing the app
         checkIfTheFirstTime();
+
+        //changing the color of the action bar
+        ReusableFunctions.actionBar("Call US",getSupportActionBar());
+
 
     }
     private void checkIfTheFirstTime(){
-        sharedPreferences = getSharedPreferences("pref",MODE_PRIVATE);
-        checkTheFirstTime = sharedPreferences.getString("installForTheFirstTime","");
-        if (checkTheFirstTime.equals("yes")){
-            Intent i = new Intent(this,SendVCode.class);
-            startActivity(i);
-        }
-        else {
-            SharedPreferences.Editor edit = sharedPreferences.edit();
-            edit.putString("installForTheFirstTime","yes");
-            edit.apply();
-        }
+        boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getBoolean("isFirstRun", true);
+
+        if (isFirstRun)
+            startActivity(new Intent(MainActivity.this, SendVCode.class));
+
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putBoolean("isFirstRun", false).apply();
     }
 }

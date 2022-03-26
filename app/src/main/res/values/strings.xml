@@ -2,21 +2,22 @@
     <string name="app_name">CallUS</string>
 
     //texts for entering phone number for registration
-    <string name="welcomeToAddNumber" translatable="false">Enter your mobile number</string>
-    <string name="explainToAddNumber" translatable="false">Your number will be stored or used as a contact
+    <string name="welcomeToAddNumber" >Enter your mobile number</string>
+    <string name="explainToAddNumber" >Your number will be stored or used as a contact
     method after the first time you register and agree to our terms and conditions and privacy policy</string>
-    <string name="TextNumberHint" translatable="false"> what is your number?</string>
-    <string name="ButtonphoneContinue" translatable="false">Continue</string>
-    <string name="VerificationCode" translatable="false">Enter verification code</string>
-    <string name="phoneSent" translatable="false">Verification code has been sent to</string>
-    <string name="DontRecieve" translatable="false">Don\'t receive verification code? </string>
-    <string name="resend" translatable="false">Resend</string>
-    <string name="verify" translatable="false">Verify</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="Welcome" translatable="false">Welcome</string>
-    <string name="ChooseASavedPlace" translatable="false">اختر مكانًا محفوظًا</string>
-    <string name="SetdestinationOnMap" translatable="false">تعيين الوجهة على الخريطة</string>
+    <string name="TextNumberHint"> what is your number?</string>
+    <string name="ButtonPhoneContinue">Continue</string>
+    <string name="VerificationCode">Enter verification code</string>
+    <string name="phoneSent">Verification code has been sent to</string>
+    <string name="DontRecieve" >Don\'t receive verification code? </string>
+    <string name="resend">Resend</string>
+    <string name="verify">Verify</string>
+
+    //wlc fragment
+    <string name="Welcome">Welcome</string>
+    <string name="ChooseASavedPlace">Choose a Saved Place</string>
+    <string name="setDestination">Set destination on map</string>
+
 
 
 

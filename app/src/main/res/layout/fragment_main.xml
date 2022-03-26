@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.MainFragment"
+    android:background="@color/backgroundColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvWlc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:drawablePadding="10dp"
+            android:text="@string/Welcome"
+            android:textColor="#D69D66"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableTint="@color/textColor"
+            app:drawableRightCompat="@drawable/ic_emoji" />
+
+        <Button
+            android:id="@+id/btnPlan"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="66dp"
+            android:background="@drawable/btn_shape"
+            android:paddingTop="6dp"
+            android:drawableTop="@drawable/ic_book_car"
+            android:drawableTint="@color/backgroundColor"
+            app:layout_constraintEnd_toEndOf="@id/tvWlc"
+            app:layout_constraintTop_toTopOf="@id/btnBookNow"
+            app:layout_constraintStart_toEndOf="@id/btnBookNow"/>
+
+        <Button
+            android:id="@+id/btnBookNow"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_shape"
+            android:drawableEnd="@drawable/ic_delivery"
+            android:drawableTint="@color/backgroundColor"
+            app:layout_constraintTop_toBottomOf="@+id/tvWlc"
+            app:layout_constraintStart_toStartOf="@+id/tvWlc"
+            />
+
+        <TextView
+            android:id="@+id/tvChooseSavedPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="15dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/tv_stroke"
+            android:text="@string/ChooseASavedPlace"
+            android:textColor="@color/grayLines"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/btnBookNow"
+            app:layout_constraintStart_toStartOf="@+id/btnBookNow"
+            app:layout_constraintEnd_toEndOf="@+id/btnPlan"
+            app:drawableLeftCompat="@drawable/ic_arrow_right_circle"
+            app:drawableRightCompat="@drawable/ic_arrow_right"
+            app:drawableTint="#E0E2EE" />
+
+        <TextView
+            android:id="@+id/tvSetDest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="20dp"
+            android:drawablePadding="10dp"
+            android:paddingVertical="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/tv_stroke"
+            android:text="@string/setDestination"
+            android:textColor="@color/grayLines"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvChooseSavedPlace"
+            app:layout_constraintStart_toStartOf="@+id/tvChooseSavedPlace"
+            app:layout_constraintEnd_toEndOf="@+id/tvChooseSavedPlace"
+            app:drawableLeftCompat="@drawable/ic_arrow_right_circle"
+            app:drawableRightCompat="@drawable/ic_arrow_right"
+            app:drawableTint="#e0e2ee" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvSetDest"
+            app:layout_constraintStart_toStartOf="@+id/tvSetDest"
+            app:layout_constraintEnd_toEndOf="@id/tvSetDest"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
