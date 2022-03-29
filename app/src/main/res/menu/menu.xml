@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single" />
+
+    <item
+        android:id="@+id/nav_Nearby"
+        android:checked="false"
+        android:icon="@drawable/right_icon"
+        android:title="Nearby" />
+
+    <item
+        android:id="@+id/nav_Scan_QR_code"
+        android:checked="false"
+        android:icon="@drawable/right_icon"
+        android:title="Scan_QR_code" />
+
+    <item
+        android:id="@+id/nav_My_Profile"
+        android:checked="false"
+        android:icon="@drawable/right_icon"
+        android:title="My Profile" />
+
+    <item
+        android:id="@+id/nav_My_Location"
+        android:checked="false"
+        android:icon="@drawable/right_icon"
+        android:title="My Location" />
+
+    <item
+        android:id="@+id/nav_booking"
+        android:checked="true"
+        android:icon="@drawable/right_icon"
+        android:title="Booking" />
+
+    <item
+        android:id="@+id/nav_Services"
+        android:checked="true"
+        android:icon="@drawable/right_icon"
+        android:title="Services" />
+
+    <item
+        android:id="@+id/nav_contact_Us"
+        android:checked="false"
+        android:icon="@drawable/right_icon"
+        android:title="Contact Us" />
+
+    <item
+        android:id="@+id/nav_About_Us"
+        android:checked="true"
+        android:icon="@drawable/right_icon"
+        android:title="About Us" />
+
+    <item
+        android:id="@+id/nav_Setting"
+        android:checked="true"
+        android:icon="@drawable/right_icon"
+        android:title="Setting" />
+
+    <item
+        android:id="@+id/nav_Log_Out"
+        android:checked="true"
+        android:icon="@drawable/right_icon"
+        android:title="Log Out" />
+</menu>

@@ -16,6 +16,12 @@
     <string name="Welcome" >أهلاً بك</string>
     <string name="ChooseASavedPlace" translatable="false">اختر مكانًا محفوظًا</string>
     <string name="setDestination">حدد وجهتك على الخريطة</string>
+    <string name="open">افتح</string>
+    <string name="close">اغلق</string>
+    <string name="hello_blank_fragment">مرحبا بك </string>
+    <string name="NavegationDrawer">NavegationDrawer</string>
+
+
 
 
 

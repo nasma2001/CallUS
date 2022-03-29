@@ -2,14 +2,14 @@
     <string name="app_name">CallUS</string>
 
     //texts for entering phone number for registration
-    <string name="welcomeToAddNumber" >Enter your mobile number</string>
-    <string name="explainToAddNumber" >Your number will be stored or used as a contact
+    <string name="welcomeToAddNumber">Enter your mobile number</string>
+    <string name="explainToAddNumber">Your number will be stored or used as a contact
     method after the first time you register and agree to our terms and conditions and privacy policy</string>
     <string name="TextNumberHint"> what is your number?</string>
     <string name="ButtonPhoneContinue">Continue</string>
     <string name="VerificationCode">Enter verification code</string>
     <string name="phoneSent">Verification code has been sent to</string>
-    <string name="DontRecieve" >Don\'t receive verification code? </string>
+    <string name="DontRecieve">Don\'t receive verification code? </string>
     <string name="resend">Resend</string>
     <string name="verify">Verify</string>
 
@@ -18,7 +18,12 @@
     <string name="ChooseASavedPlace">Choose a Saved Place</string>
     <string name="setDestination">Set destination on map</string>
 
+    //nav
 
+    <string name="NavegationDrawer">NavegationDrawer</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
