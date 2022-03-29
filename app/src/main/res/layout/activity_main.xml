@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fcvContainer"
         android:layout_width="0dp"
-        android:layout_height="680dp"
+        android:layout_height="675dp"
         android:name="com.example.callus.Fragments.MainFragment"
         android:background="@color/backgroundColor"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,6 +17,20 @@
         >
 
     </androidx.fragment.app.FragmentContainerView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/backgroundColor"
+        app:menu="@menu/bottom_navbar"
+        >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <include layout="@layout/navdrawer"/>
+
 
 
 

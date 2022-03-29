@@ -1,4 +1,4 @@
-package com.example.callus.NavegationDrawer;
+package com.example.callus.NavigationDrawerFragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,10 +11,10 @@ import com.example.callus.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Log_OutFragment#newInstance} factory method to
+ * Use the {@link BookingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Log_OutFragment extends Fragment {
+public class BookingFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,7 +25,7 @@ public class Log_OutFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Log_OutFragment() {
+    public BookingFragment() {
         // Required empty public constructor
     }
 
@@ -35,11 +35,11 @@ public class Log_OutFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Log_OutFragment.
+     * @return A new instance of fragment BookingFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static Log_OutFragment newInstance(String param1, String param2) {
-        Log_OutFragment fragment = new Log_OutFragment();
+    public static BookingFragment newInstance(String param1, String param2) {
+        BookingFragment fragment = new BookingFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,7 +60,6 @@ public class Log_OutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_log__out, container, false);
-
+        return inflater.inflate(R.layout.fragment_booking, container, false);
     }
 }

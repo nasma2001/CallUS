@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nearby"
+        android:title="@string/navNearby"
+        android:icon="@drawable/ic_near"/>
+    <item
+        android:id="@+id/home"
+        android:title="@string/navHome"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/depart"
+        android:title="@string/navDepart"
+        android:icon="@drawable/ic_depart"/>
+</menu>

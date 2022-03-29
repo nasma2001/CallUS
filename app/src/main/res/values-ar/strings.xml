@@ -13,6 +13,8 @@
     <string name="DontRecieve">لم يصلك رمز التحقق؟</string>
     <string name="resend">اعادة الإرسال</string>
     <string name="verify">التحقق</string>
+
+    //wlc frragmant
     <string name="Welcome" >أهلاً بك</string>
     <string name="ChooseASavedPlace" translatable="false">اختر مكانًا محفوظًا</string>
     <string name="setDestination">حدد وجهتك على الخريطة</string>
@@ -20,6 +22,12 @@
     <string name="close">اغلق</string>
     <string name="hello_blank_fragment">مرحبا بك </string>
     <string name="NavegationDrawer">NavegationDrawer</string>
+
+    //bottom navbar
+    <string name="navHome">الرئيسية</string>
+    <string name="navNearby">الأماكن القريبة</string>
+    <string name="navDepart">المغادرة</string>
+
 
 
 

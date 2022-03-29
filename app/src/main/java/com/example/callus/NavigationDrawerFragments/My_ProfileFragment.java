@@ -1,4 +1,4 @@
-package com.example.callus.NavegationDrawer;
+package com.example.callus.NavigationDrawerFragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,10 +11,10 @@ import com.example.callus.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link nearlyFragment#newInstance} factory method to
+ * Use the {@link My_ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class nearlyFragment extends Fragment {
+public class My_ProfileFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,7 +25,7 @@ public class nearlyFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public nearlyFragment() {
+    public My_ProfileFragment() {
         // Required empty public constructor
     }
 
@@ -35,11 +35,11 @@ public class nearlyFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment nearlyFragment.
+     * @return A new instance of fragment My_ProfileFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static nearlyFragment newInstance(String param1, String param2) {
-        nearlyFragment fragment = new nearlyFragment();
+    public static My_ProfileFragment newInstance(String param1, String param2) {
+        My_ProfileFragment fragment = new My_ProfileFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,6 +60,6 @@ public class nearlyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nearly, container, false);
+        return inflater.inflate(R.layout.fragment_my__profile, container, false);
     }
 }
