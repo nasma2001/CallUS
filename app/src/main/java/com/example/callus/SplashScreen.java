@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.callus.VerifyPhone.SendVCode;
+
 public class SplashScreen extends AppCompatActivity {
 
     @Override
@@ -25,4 +27,6 @@ public class SplashScreen extends AppCompatActivity {
             finish();
         }, 2500);
     }
+
+
 }

@@ -9,19 +9,18 @@
         android:id="@+id/fcvContainer"
         android:layout_width="0dp"
         android:layout_height="675dp"
-        android:name="com.example.callus.Fragments.MainFragment"
         android:background="@color/backgroundColor"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         >
-
     </androidx.fragment.app.FragmentContainerView>
-
+    <include layout="@layout/navdrawer"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/navBar"
+        android:elevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +28,7 @@
         app:menu="@menu/bottom_navbar"
         >
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-    <include layout="@layout/navdrawer"/>
+
 
 
 

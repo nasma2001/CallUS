@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "791298133522",
-    "project_id": "callus-883ba",
-    "storage_bucket": "callus-883ba.appspot.com"
+    "project_number": "156489894610",
+    "project_id": "callus-ff8b9",
+    "storage_bucket": "callus-ff8b9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:791298133522:android:67d71836742582be3a52cb",
+        "mobilesdk_app_id": "1:156489894610:android:581108aabe3f964a943b0b",
         "android_client_info": {
           "package_name": "com.example.callus"
         }
       },
       "oauth_client": [
         {
-          "client_id": "791298133522-9jdit19jp8kfua7s1lnmk582056g7ip5.apps.googleusercontent.com",
+          "client_id": "156489894610-pfuqeq4kcv4u7g2qlkmgho9uf0hunq2f.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.callus",
-            "certificate_hash": "87c73578d9cddac17ba965b3c0ea9bfcf0e74334"
+            "certificate_hash": "d8ef19ab72625cfa98288a1e9b586d4f4f62b1fe"
           }
         },
         {
-          "client_id": "791298133522-nn98fcmf6c7khr3ej57hi412mt9u3q42.apps.googleusercontent.com",
+          "client_id": "156489894610-db2qhnr432j8i0an7br9cmldgg21beq5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCXVr2413s3do4jjM17qBRmuv3V43fAWK8"
+          "current_key": "AIzaSyC71tyYpcjT-4CUM3_30mKfk-dPEura0dU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "791298133522-nn98fcmf6c7khr3ej57hi412mt9u3q42.apps.googleusercontent.com",
+              "client_id": "156489894610-db2qhnr432j8i0an7br9cmldgg21beq5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

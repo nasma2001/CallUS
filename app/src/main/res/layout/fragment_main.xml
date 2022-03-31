@@ -14,16 +14,16 @@
             android:id="@+id/tvWlc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="30dp"
             android:drawablePadding="10dp"
             android:text="@string/Welcome"
-            android:textColor="#D69D66"
+            android:textColor="@color/grayLines"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:drawableTint="@color/textColor"
+            app:drawableTint="@color/grayLines"
             app:drawableRightCompat="@drawable/ic_emoji" />
 
         <ImageButton
@@ -36,7 +36,8 @@
             app:layout_constraintEnd_toEndOf="@id/tvWlc"
             app:layout_constraintTop_toTopOf="@id/btnBookNow"
             app:layout_constraintStart_toEndOf="@id/btnBookNow"
-            app:tint="@color/backgroundColor"/>
+            app:tint="@color/backgroundColor"
+             />
 
         <ImageButton
             android:id="@+id/btnBookNow"
