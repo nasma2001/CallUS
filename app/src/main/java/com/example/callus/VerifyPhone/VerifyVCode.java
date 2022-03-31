@@ -102,17 +102,20 @@ public class VerifyVCode extends AppCompatActivity {
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         firebaseAuth.signInWithCredential(phoneAuthCredential).
                 addOnCompleteListener(task -> {
+
                     progressBar.setVisibility(View.GONE);
                     btnVerify.setVisibility(View.VISIBLE);
+
                     if (task.isSuccessful()){
                         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
+                        getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                                .edit().putBoolean("hasVerified",true).apply();
                         Intent i = new Intent(this, MainActivity.class);
-//                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(i);
                     }
                     else
                         Toast.makeText(this, "Invalid verification code", Toast.LENGTH_SHORT).show();
-
                 });
     }
 

@@ -37,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     NavigationView navigationView;
     BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //check if the first time installing the app
-        checkIfTheFirstTime();
+
         //load the main fragment first
         loadFragment(new MainFragment());
         //inflate
@@ -51,20 +51,22 @@ public class MainActivity extends AppCompatActivity {
         navDrawer();
 
         //changing the color of the action bar
-        ReusableFunctions.actionBar("Call US",getSupportActionBar());
+        ReusableFunctions.actionBar("Call US", getSupportActionBar());
 
 
     }
-    private void inflate(){
+
+    private void inflate() {
         bottomNavigationView = findViewById(R.id.navBar);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(bottomNav);
-        drawerLayout=findViewById(R.id.drawer);
-        toolbar=findViewById(R.id.toolBar);
+        drawerLayout = findViewById(R.id.drawer);
+        toolbar = findViewById(R.id.toolBar);
     }
+
     @SuppressLint("NonConstantResourceId")
-    private final NavigationBarView.OnItemSelectedListener bottomNav= item -> {
-        switch (item.getItemId()){
+    private final NavigationBarView.OnItemSelectedListener bottomNav = item -> {
+        switch (item.getItemId()) {
             case R.id.home:
                 loadFragmentFromNav(new MainFragment());
                 break;
@@ -79,16 +81,15 @@ public class MainActivity extends AppCompatActivity {
     };
 
     @SuppressLint("NonConstantResourceId")
-    private void navDrawer(){
+    private void navDrawer() {
         setSupportActionBar(toolbar);
         drawerLayout.addDrawerListener(toggle);
-        toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
         toggle.syncState();
-        navigationView=findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
 
         navigationView.setNavigationItemSelectedListener(menuItem -> {
-            switch (menuItem.getItemId())
-            {
+            switch (menuItem.getItemId()) {
                 case R.id.nav_Nearby:
                     loadFragmentFromNav(new NearbyFragment());
                     break;
@@ -125,28 +126,20 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
     }
+
     private void loadFragmentFromNav(Fragment fragment) {
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame,fragment).commit();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame, fragment).commit();
         drawerLayout.closeDrawer(GravityCompat.START);
     }
+
     private void loadFragment(Fragment fragment) {
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame,fragment).commit();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame, fragment).commit();
     }
-    private void checkIfTheFirstTime(){
-        boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                .getBoolean("isFirstRun", true);
 
-        if (isFirstRun)
-            startActivity(new Intent(this, SendVCode.class));
-        else
-            startActivity(new Intent(this, MainActivity.class));
 
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-                .putBoolean("isFirstRun", false).apply();
-    }
 
 }
