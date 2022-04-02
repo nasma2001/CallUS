@@ -41,10 +41,10 @@
     <string name="search">إبحث</string>
 
     //Deliver
-    <string name="from"> من </string>
-    <string name="to"> الى </string>
-    <string name="when"> متى </string>
-    <string name="choose_the_way"> اختر الطريق </string>
+    <string name="from"> من : </string>
+    <string name="to"> الى : </string>
+    <string name="when"> متى : </string>
+    <string name="choose_the_way"> اختر الطريقة : </string>
 
 
 

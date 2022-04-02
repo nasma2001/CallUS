@@ -13,7 +13,7 @@ public class Delivery extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delivery);
+        setContentView(R.layout.deliver_with_us);
         // inflate
         inflate();
         setSupportActionBar(toolbar);

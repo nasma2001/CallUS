@@ -17,7 +17,7 @@ public class SavedPlaces extends AppCompatActivity {
         // inflate
         inflate();
         setSupportActionBar(toolbar);
-        ReusableFunctions.actionBar("Deliver with us",getSupportActionBar());
+        ReusableFunctions.actionBar("Choose a saved place",getSupportActionBar());
     }
     private void inflate(){
         toolbar = findViewById(R.id.toolBar);

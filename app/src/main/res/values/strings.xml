@@ -41,10 +41,10 @@
     <string name="search">Search</string>
 
     //Deliver
-    <string name="from">From</string>
-    <string name="to">To</string>
-    <string name="when">When</string>
-    <string name="choose_the_way">Choose the way</string>
+    <string name="from">From :</string>
+    <string name="to">To :</string>
+    <string name="when">When :</string>
+    <string name="choose_the_way">Choose the \n way :</string>
 
 
 
