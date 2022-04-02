@@ -28,6 +28,7 @@
     <string name="contactUs">Contact US</string>
     <string name="setting">Setting</string>
     <string name="logOut">Log Out</string>
+
     //bottom navbar
     <string name="navHome">Home</string>
     <string name="navNearby">Nearby</string>
@@ -38,6 +39,15 @@
     <string name="departing">Departing</string>
     <string name="now">Now</string>
     <string name="search">Search</string>
+
+    //Deliver
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="when">When</string>
+    <string name="choose_the_way">Choose the way</string>
+
+
+
 
 
 </resources>

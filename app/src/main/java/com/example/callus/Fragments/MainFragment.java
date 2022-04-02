@@ -34,6 +34,7 @@ public class MainFragment extends Fragment{
     FusedLocationProviderClient client;
     SupportMapFragment supportMapFragment;
     TextView tvDelivery ,tvSavedPlaces;
+
     public static final String LOCATION_PERMISSION = Manifest.permission.ACCESS_FINE_LOCATION;
 
     public MainFragment() {
