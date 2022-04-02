@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.MainFragmentActivities.Delivery">
-    <include layout="@layout/app_bar_main"/>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_main"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="171dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
