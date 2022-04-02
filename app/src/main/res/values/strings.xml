@@ -16,13 +16,18 @@
     //wlc fragment
     <string name="Welcome">Welcome</string>
     <string name="ChooseASavedPlace">Choose a Saved Place</string>
-    <string name="setDestination">Set destination on map</string>
+    <string name="deliver">deliver with us</string>
 
     //nav
     <string name="NavegationDrawer">Navigation Drawer</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-
+    <string name="scan">Scan QR Code</string>
+    <string name="myProf">My Profile</string>
+    <string name="booking">Booking</string>
+    <string name="contactUs">Contact US</string>
+    <string name="setting">Setting</string>
+    <string name="logOut">Log Out</string>
     //bottom navbar
     <string name="navHome">Home</string>
     <string name="navNearby">Nearby</string>

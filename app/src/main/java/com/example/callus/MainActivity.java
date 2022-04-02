@@ -10,23 +10,18 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.callus.Fragments.Departures;
 import com.example.callus.Fragments.MainFragment;
-import com.example.callus.NavigationDrawerFragments.About_UsFragment;
 import com.example.callus.NavigationDrawerFragments.BookingFragment;
-import com.example.callus.NavigationDrawerFragments.Log_OutFragment;
-import com.example.callus.NavigationDrawerFragments.MY_LocationFragment;
-import com.example.callus.NavigationDrawerFragments.My_ProfileFragment;
-import com.example.callus.NavigationDrawerFragments.ServicesFragment;
+import com.example.callus.NavigationDrawerFragments.LogOutFragment;
+import com.example.callus.NavigationDrawerFragments.MyProfileFragment;
 import com.example.callus.NavigationDrawerFragments.SettingFragment;
-import com.example.callus.NavigationDrawerFragments.contact_UsFragment;
-import com.example.callus.NavigationDrawerFragments.NearbyFragment;
-import com.example.callus.NavigationDrawerFragments.scan_QR_codeFragment;
+import com.example.callus.NavigationDrawerFragments.ContactUsFragment;
+import com.example.callus.Fragments.NearbyFragment;
+import com.example.callus.NavigationDrawerFragments.ScanQRFragment;
 import com.example.callus.ReusableFunctions.ReusableFunctions;
-import com.example.callus.VerifyPhone.SendVCode;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -37,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     NavigationView navigationView;
     BottomNavigationView bottomNavigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,31 +90,22 @@ public class MainActivity extends AppCompatActivity {
                     loadFragmentFromNav(new NearbyFragment());
                     break;
                 case R.id.nav_Scan_QR_code:
-                    loadFragmentFromNav(new scan_QR_codeFragment());
+                    loadFragmentFromNav(new ScanQRFragment());
                     break;
                 case R.id.nav_My_Profile:
-                    loadFragmentFromNav(new My_ProfileFragment());
-                    break;
-                case R.id.nav_My_Location:
-                    loadFragmentFromNav(new MY_LocationFragment());
+                    loadFragmentFromNav(new MyProfileFragment());
                     break;
                 case R.id.nav_booking:
                     loadFragmentFromNav(new BookingFragment());
                     break;
-                case R.id.nav_Services:
-                    loadFragmentFromNav(new ServicesFragment());
-                    break;
                 case R.id.nav_contact_Us:
-                    loadFragmentFromNav(new contact_UsFragment());
-                    break;
-                case R.id.nav_About_Us:
-                    loadFragmentFromNav(new About_UsFragment());
+                    loadFragmentFromNav(new ContactUsFragment());
                     break;
                 case R.id.nav_Setting:
                     loadFragmentFromNav(new SettingFragment());
                     break;
                 case R.id.nav_Log_Out:
-                    loadFragmentFromNav(new Log_OutFragment());
+                    loadFragmentFromNav(new LogOutFragment());
                     break;
                 default:
                     return true;
@@ -139,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment).commit();
     }
-
 
 
 }

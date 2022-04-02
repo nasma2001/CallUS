@@ -14,10 +14,17 @@
     <string name="resend">اعادة الإرسال</string>
     <string name="verify">التحقق</string>
 
-    //wlc frragmant
+    //nav drawer
+    <string name="scan">فحص رمز QR</string>
+    <string name="myProf">ملفي الشخصي</string>
+    <string name="booking">الحجوزات</string>
+    <string name="contactUs">تواصل معنا</string>
+    <string name="setting">الإعدادات</string>
+    <string name="logOut">تسجيل الخروج</string>
+    //wlc fragmant
     <string name="Welcome" >أهلاً بك</string>
     <string name="ChooseASavedPlace" translatable="false">اختر مكانًا محفوظًا</string>
-    <string name="setDestination">حدد وجهتك على الخريطة</string>
+    <string name="deliver">وصل معنا</string>
     <string name="open">افتح</string>
     <string name="close">اغلق</string>
     <string name="NavegationDrawer">NavegationDrawer</string>

@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment;
 import com.example.callus.R;
 
 
-public class contact_UsFragment extends Fragment {
+public class ContactUsFragment extends Fragment {
 
-    public contact_UsFragment() {
+    public ContactUsFragment() {
         // Required empty public constructor
     }
 
