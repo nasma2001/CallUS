@@ -14,12 +14,11 @@
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:background="#e0e2ee"
+            android:background="@color/backgroundColor"
             android:id="@+id/toolBar"
             app:popupTheme="@style/AppTheme.AppBarOverlay"
             app:layout_scrollFlags="scroll|enterAlways"
             android:layout_height="60dp">
-
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>

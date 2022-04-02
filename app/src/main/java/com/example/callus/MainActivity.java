@@ -16,7 +16,6 @@ import com.example.callus.Fragments.Departures;
 import com.example.callus.Fragments.MainFragment;
 import com.example.callus.NavigationDrawerFragments.BookingFragment;
 import com.example.callus.NavigationDrawerFragments.LogOutFragment;
-import com.example.callus.NavigationDrawerFragments.MyProfileFragment;
 import com.example.callus.NavigationDrawerFragments.SettingFragment;
 import com.example.callus.NavigationDrawerFragments.ContactUsFragment;
 import com.example.callus.Fragments.NearbyFragment;
@@ -45,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
         inflate();
         //nav drawer
         navDrawer();
-
-        //changing the color of the action bar
-        ReusableFunctions.actionBar("Call US", getSupportActionBar());
-
 
     }
 
@@ -91,9 +86,6 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.nav_Scan_QR_code:
                     loadFragmentFromNav(new ScanQRFragment());
-                    break;
-                case R.id.nav_My_Profile:
-                    loadFragmentFromNav(new MyProfileFragment());
                     break;
                 case R.id.nav_booking:
                     loadFragmentFromNav(new BookingFragment());

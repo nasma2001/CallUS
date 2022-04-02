@@ -2,6 +2,7 @@ package com.example.callus.Fragments;
 
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -14,7 +15,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.callus.Fragments.MainFragmentActivities.Delivery;
+import com.example.callus.Fragments.MainFragmentActivities.SavedPlaces;
 import com.example.callus.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -29,6 +33,7 @@ import com.google.android.gms.tasks.Task;
 public class MainFragment extends Fragment{
     FusedLocationProviderClient client;
     SupportMapFragment supportMapFragment;
+    TextView tvDelivery ,tvSavedPlaces;
     public static final String LOCATION_PERMISSION = Manifest.permission.ACCESS_FINE_LOCATION;
 
     public MainFragment() {
@@ -48,8 +53,21 @@ public class MainFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_main, container, false);
+        // inflate views
+        inflate(v);
+        tvSavedPlaces.setOnClickListener(view -> {
+            startActivity(new Intent(getActivity(), SavedPlaces.class));
+        });
+        tvDelivery.setOnClickListener(view -> {
+            startActivity(new Intent(getActivity(), Delivery.class));
+
+        });
 
         return v;
+    }
+    private void inflate(View v){
+        tvDelivery = v.findViewById(R.id.tvDeliver);
+        tvSavedPlaces = v.findViewById(R.id.tvChooseSavedPlace);
     }
 
     private void getCurrentLocation() {

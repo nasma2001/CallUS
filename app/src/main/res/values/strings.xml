@@ -16,7 +16,7 @@
     //wlc fragment
     <string name="Welcome">Welcome</string>
     <string name="ChooseASavedPlace">Choose a Saved Place</string>
-    <string name="deliver">deliver with us</string>
+    <string name="deliver">Deliver With Us</string>
 
     //nav
     <string name="NavegationDrawer">Navigation Drawer</string>

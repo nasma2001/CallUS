@@ -12,7 +12,8 @@ public class ReusableFunctions {
         ColorDrawable colorDrawable
                 = new ColorDrawable(Color.parseColor("#3d6d79"));
         if (actionBar != null) {
-            actionBar.setTitle(Html.fromHtml("<font color='#e0e2ee'>" +title+ "</font>"));
+            actionBar.setTitle(title);
+            actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setBackgroundDrawable(colorDrawable);
         }
     }

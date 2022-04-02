@@ -15,12 +15,6 @@
         android:title="@string/scan" />
 
     <item
-        android:id="@+id/nav_My_Profile"
-        android:checked="false"
-        android:icon="@drawable/right_icon"
-        android:title="@string/myProf" />
-
-    <item
         android:id="@+id/nav_booking"
         android:checked="true"
         android:icon="@drawable/right_icon"
