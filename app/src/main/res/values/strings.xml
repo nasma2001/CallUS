@@ -39,9 +39,5 @@
     <string name="now">Now</string>
     <string name="search">Search</string>
 
-    //Saved Places
-    <string name="AddSavedPlace" translatable="false">Add Saved Place</string>
-    <string name="gettofavoritedirections" translatable="false">get to your favorite directions faster</string>
-
 
 </resources>

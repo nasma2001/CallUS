@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+    <TextView
+        android:id="@+id/tvForm"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:text="From :"
+        android:padding="10dp"
+        android:textColor="#3d6d79"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="To :"
+        android:padding="10dp"
+        android:textColor="#3d6d79"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForm" />
+
+    <TextView
+        android:id="@+id/tvWhen"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="When :"
+        android:padding="10dp"
+        android:textColor="#3d6d79"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTo" />
+
+    <TextView
+        android:id="@+id/tvWay"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Choose the way :"
+        android:textColor="#3d6d79"
+        android:textSize="20sp"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWhen" />
+
+    <EditText
+        android:id="@+id/etForm"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:padding="10dp"
+        android:inputType="textPersonName"
+        android:hint="From"
+        app:layout_constraintStart_toEndOf="@+id/tvTo"
+        app:layout_constraintTop_toTopOf="@+id/tvForm" />
+
+    <EditText
+        android:id="@+id/etTo"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="To"
+        app:layout_constraintStart_toEndOf="@+id/tvWhen"
+        app:layout_constraintTop_toBottomOf="@+id/etForm" />
+
+    <EditText
+        android:id="@+id/etWhen"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="When"
+        app:layout_constraintStart_toEndOf="@+id/tvWay"
+        app:layout_constraintTop_toBottomOf="@+id/etTo" />
+
+    <EditText
+        android:id="@+id/etWay"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Choose the way"
+        app:layout_constraintStart_toEndOf="@+id/tvWay"
+        app:layout_constraintTop_toBottomOf="@+id/etWhen" />
+</androidx.constraintlayout.widget.ConstraintLayout>
