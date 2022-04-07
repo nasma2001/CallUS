@@ -39,6 +39,13 @@
     <string name="now">Now</string>
     <string name="search">Search</string>
 
+    //
+    <string name="from"> From </string>
+    <string name="to"> To </string>
+    <string name="when"> When </string>
+    <string name="choose_the_way"> Choose the way </string>
+
+
 
 
 

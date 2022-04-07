@@ -14,12 +14,15 @@ public class SavedPlaces extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved_places);
+
         // inflate
         inflate();
+
         setSupportActionBar(toolbar);
         ReusableFunctions.actionBar("Choose a saved place",getSupportActionBar());
     }
     private void inflate(){
         toolbar = findViewById(R.id.toolBar);
     }
+
 }

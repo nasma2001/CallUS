@@ -40,6 +40,10 @@
     <string name="now">الآن</string>
     <string name="search">إبحث</string>
 
+    <string name="from"> من </string>
+    <string name="to"> إلى </string>
+    <string name="when"> متى </string>
+    <string name="choose_the_way"> إختر الطريقة </string>
 
 
 
