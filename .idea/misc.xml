@@ -32,12 +32,10 @@
         <entry key="..\:/CallUS/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/CallUS/app/src/main/res/layout/activity_main1.xml" value="0.15172101449275363" />
         <entry key="..\:/CallUS/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.15172101449275363" />
-        <entry key="..\:/CallUS/app/src/main/res/layout/activity_saved_places.xml" value="0.15172101449275363" />
         <entry key="..\:/CallUS/app/src/main/res/layout/activity_splash_screen.xml" value="0.1897644927536232" />
         <entry key="..\:/CallUS/app/src/main/res/layout/activity_verify_phone.xml" value="0.20199275362318841" />
         <entry key="..\:/CallUS/app/src/main/res/layout/app_bar_main.xml" value="0.15172101449275363" />
         <entry key="..\:/CallUS/app/src/main/res/layout/bg_edit_text.xml" value="0.1897644927536232" />
-        <entry key="..\:/CallUS/app/src/main/res/layout/deliver_with_us.xml" value="0.15172101449275363" />
         <entry key="..\:/CallUS/app/src/main/res/layout/fragment_about__us.xml" value="0.15172101449275363" />
         <entry key="..\:/CallUS/app/src/main/res/layout/fragment_booking.xml" value="0.15172101449275363" />
         <entry key="..\:/CallUS/app/src/main/res/layout/fragment_contact__us.xml" value="0.15172101449275363" />
@@ -59,6 +57,16 @@
         <entry key="..\:/CallUS/app/src/main/res/menu/bottom_navbar.xml" value="0.20416666666666666" />
         <entry key="..\:/CallUS/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/CallUS/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1125" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/activity_add_phone_number.xml" value="0.184375" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/activity_delivery.xml" value="0.184375" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/activity_main.xml" value="0.184375" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.184375" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/activity_saved_places.xml" value="0.184375" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.184375" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/deliver_with_us.xml" value="0.22" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/fragment_booking.xml" value="0.184375" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/fragment_contact__us.xml" value="0.184375" />
+        <entry key="..\:/Users/Eng.Nabil/CallUSFinal/app/src/main/res/layout/fragment_departures.xml" value="0.184375" />
         <entry key="..\:/Users/Rant/AndroidStudioProjects/CallUS/app/src/main/res/layout/activity_delivery.xml" value="0.25" />
         <entry key="..\:/Users/Rant/AndroidStudioProjects/CallUS/app/src/main/res/layout/activity_saved_places.xml" value="0.2" />
         <entry key="..\:/Users/Rant/AndroidStudioProjects/CallUS/app/src/main/res/layout/activity_splash_screen.xml" value="0.129981884057971" />
