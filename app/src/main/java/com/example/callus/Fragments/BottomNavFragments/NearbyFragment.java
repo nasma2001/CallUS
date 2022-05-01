@@ -1,4 +1,4 @@
-package com.example.callus.NavigationDrawerFragments;
+package com.example.callus.Fragments.BottomNavFragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,23 +10,17 @@ import androidx.fragment.app.Fragment;
 import com.example.callus.R;
 
 
-public class ContactUsFragment extends Fragment {
+public class NearbyFragment extends Fragment {
 
-    public ContactUsFragment() {
+
+    public NearbyFragment() {
         // Required empty public constructor
-    }
-
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact__us, container, false);
+        return inflater.inflate(R.layout.fragment_nearby, container, false);
     }
 }

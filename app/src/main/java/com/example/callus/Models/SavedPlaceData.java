@@ -1,4 +1,4 @@
-package com.example.callus.Fragments.MainFragmentActivities;
+package com.example.callus.Models;
 
 import java.io.Serializable;
 

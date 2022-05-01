@@ -1,4 +1,4 @@
-package com.example.callus.NavigationDrawerFragments;
+package com.example.callus.Fragments.NavigationDrawerFragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,10 +11,10 @@ import com.example.callus.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ScanQRFragment#newInstance} factory method to
+ * Use the {@link LogOutFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ScanQRFragment extends Fragment {
+public class LogOutFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,7 +25,7 @@ public class ScanQRFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ScanQRFragment() {
+    public LogOutFragment() {
         // Required empty public constructor
     }
 
@@ -35,11 +35,11 @@ public class ScanQRFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment scan_QR_codeFragment.
+     * @return A new instance of fragment Log_OutFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ScanQRFragment newInstance(String param1, String param2) {
-        ScanQRFragment fragment = new ScanQRFragment();
+    public static LogOutFragment newInstance(String param1, String param2) {
+        LogOutFragment fragment = new LogOutFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,6 +60,7 @@ public class ScanQRFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scan__q_r_code, container, false);
+        return inflater.inflate(R.layout.fragment_log__out, container, false);
+
     }
 }

@@ -1,4 +1,4 @@
-package com.example.callus.Fragments.MainFragmentActivities;
+package com.example.callus.Adapters;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.callus.Models.SavedPlaceData;
 import com.example.callus.R;
 
 import java.util.ArrayList;

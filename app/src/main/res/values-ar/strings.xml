@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
     <string name="app_name">اتصل</string>
 
     //texts for entering phone number for registration
@@ -44,6 +46,30 @@
     <string name="to"> إلى </string>
     <string name="when"> متى </string>
     <string name="choose_the_way"> إختر الطريقة </string>
+
+    <string name="enterAdress">أدخل العنوان، المدينة، الكود</string>
+
+    //Strings for spinner
+    <string name="motor">دراجة نارية</string>
+    <string name="car">سيارة</string>
+    <string name="van">شاحنة</string>
+    <string name="bus">باص</string>
+
+    <string name="addplace">أضف مكاناً</string>
+    <string name="descForAddPlace">لتصل إلى مكانك المفضل بشكل أسرع</string>
+
+    //bottomsheet
+    <string name="setOnMap">إختر من الخريطة</string>
+    <string name="save">حفظ</string>
+
+    //write details for saved places
+    <string name="city">المدينة</string>
+    <string name="Street">الشارع</string>
+    <string name="home">البيت</string>
+
+    <string name="hintCity">مثال… غزة</string>
+    <string name="hintHome">مثال… بيت نسمة</string>
+
 
 
 

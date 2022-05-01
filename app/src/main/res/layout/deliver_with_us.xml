@@ -107,7 +107,7 @@
     <Spinner
         android:id="@+id/spnWays"
         android:layout_width="0dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/tvWay"
         app:layout_constraintTop_toTopOf="@+id/tvWay" />

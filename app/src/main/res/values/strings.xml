@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">CallUS</string>
 
+
+    <string name="Api_Key" translatable="false">AIzaSyC71tyYpcjT-4CUM3_30mKfk-dPEura0dU</string>
+
     //texts for entering phone number for registration
     <string name="welcomeToAddNumber">Enter your mobile number</string>
     <string name="explainToAddNumber">Your number will be stored or used as a contact
@@ -45,9 +48,28 @@
     <string name="when"> When </string>
     <string name="choose_the_way"> Choose the way </string>
 
+    //
+    <string name="enterAdress">Enter Address, City, Or Zip code</string>
 
+    //Strings for spinner
+    <string name="motor">Motorcycle</string>
+    <string name="car">Car</string>
+    <string name="van">Van</string>
+    <string name="bus">Bus</string>
 
+    <string name="addplace">Add Saved Place</string>
+    <string name="descForAddPlace">get to your favorite directions faster</string>
 
+    //bottomsheet
+    <string name="setOnMap">Set On Map</string>
+    <string name="save">Save</string>
+
+    //write details for saved places
+    <string name="city">City</string>
+    <string name="Street">Street</string>
+    <string name="home">Home</string>
+    <string name="hintCity">example…Gaza</string>
+    <string name="hintHome">example...Nasma\'s home</string>
 
 
 </resources>

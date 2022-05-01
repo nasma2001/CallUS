@@ -1,4 +1,4 @@
-package com.example.callus.NavigationDrawerFragments;
+package com.example.callus.Fragments.NavigationDrawerFragments;
 
 import android.app.Activity;
 

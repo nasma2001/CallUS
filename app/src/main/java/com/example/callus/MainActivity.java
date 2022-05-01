@@ -1,5 +1,8 @@
 package com.example.callus;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -9,18 +12,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-
-import com.example.callus.Fragments.Departures;
-import com.example.callus.Fragments.MainFragment;
-import com.example.callus.NavigationDrawerFragments.BookingFragment;
-import com.example.callus.NavigationDrawerFragments.LogOutFragment;
-import com.example.callus.NavigationDrawerFragments.SettingFragment;
-import com.example.callus.NavigationDrawerFragments.ContactUsFragment;
-import com.example.callus.Fragments.NearbyFragment;
-import com.example.callus.NavigationDrawerFragments.ScanQRFragment;
-import com.example.callus.ReusableFunctions.ReusableFunctions;
+import com.example.callus.Fragments.BottomNavFragments.Departures.Departures;
+import com.example.callus.Fragments.BottomNavFragments.MainFragment;
+import com.example.callus.Fragments.BottomNavFragments.NearbyFragment;
+import com.example.callus.Fragments.NavigationDrawerFragments.BookingFragment;
+import com.example.callus.Fragments.NavigationDrawerFragments.ContactUsFragment;
+import com.example.callus.Fragments.NavigationDrawerFragments.LogOutFragment;
+import com.example.callus.Fragments.NavigationDrawerFragments.ScanQRFragment;
+import com.example.callus.Fragments.NavigationDrawerFragments.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     NavigationView navigationView;
     BottomNavigationView bottomNavigationView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         inflate();
         //nav drawer
         navDrawer();
+
+
 
     }
 
@@ -118,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment).commit();
     }
+
+
 
 
 }
