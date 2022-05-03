@@ -47,7 +47,7 @@ public class SavedPlaces extends AppCompatActivity {
     private void showBottomSheet() {
         BottomSheetDialog sheetDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
         View bottomSheet = LayoutInflater.from(this)
-                .inflate(R.layout.bottom_sheet, findViewById(R.id.bottomSheetContainer));
+                .inflate(R.layout.bottom_sheet_saved_places, findViewById(R.id.bottomSheetContainer));
 
         bottomSheet.findViewById(R.id.btnSetOnMap).setOnClickListener(view -> {
             startActivity(new Intent(this, ChooseYourLocation.class));

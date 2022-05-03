@@ -38,7 +38,7 @@
 
     //depart
     <string name="currentLocation">Current Location</string>
-    <string name="departing">Departing</string>
+    <string name="whereTo">Where To?</string>
     <string name="now">Now</string>
     <string name="search">Search</string>
 
@@ -69,7 +69,10 @@
     <string name="Street">Street</string>
     <string name="home">Home</string>
     <string name="hintCity">example…Gaza</string>
-    <string name="hintHome">example...Nasma\'s home</string>
+    <string name="hintHome">example…Nasma\'s home</string>
+
+    <string name="scheduleAride">Schedule a Ride</string>
+    <string name="setTime">Set Time</string>
 
 
 </resources>

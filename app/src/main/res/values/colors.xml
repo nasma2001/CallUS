@@ -10,4 +10,5 @@
     <color name="textColor">#d69d66</color>
     <color name="grayLines">#e0e2ee</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#CFCDCD</color>
 </resources>

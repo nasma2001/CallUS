@@ -30,32 +30,45 @@
             android:inputType="none"
             android:importantForAutofill="no"
             tools:ignore="LabelFor" />
-        <TextView
-            android:id="@+id/textview"
-            android:layout_width="wrap_content"
+
+        <EditText
+            android:id="@+id/etWhereTo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/departing"
-            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:hint="@string/whereTo"
+            android:textColorHint="@color/grayLines"
+            android:background="@drawable/tv_stroke"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="15dp"
+            android:layout_marginHorizontal="10dp"
             android:textColor="@color/grayLines"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/etCurrentLocation"
+            android:textSize="18sp"
+            android:focusable="false"
             app:layout_constraintTop_toBottomOf="@id/etCurrentLocation"
-            />
+            app:layout_constraintStart_toStartOf="@id/etCurrentLocation"
+            app:layout_constraintEnd_toEndOf="@id/etCurrentLocation"
+            android:inputType="none"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+
         <TextView
             android:id="@+id/tvTimeDeparting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/now"
+            android:text="@string/setTime"
             android:textSize="18sp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="15dp"
             android:textColor="@color/grayLines"
             android:textStyle="bold"
             android:drawablePadding="2dp"
-            app:layout_constraintStart_toEndOf="@id/textview"
-            app:layout_constraintTop_toTopOf="@id/textview"
+            app:layout_constraintStart_toStartOf="@id/etWhereTo"
+            app:layout_constraintTop_toBottomOf="@id/etWhereTo"
+            app:layout_constraintEnd_toEndOf="@id/etWhereTo"
             app:drawableEndCompat="@drawable/ic_baseline_arrow"
             app:drawableTint="@color/grayLines" />
+
         <Button
             android:id="@+id/btnSearch"
             android:layout_width="match_parent"

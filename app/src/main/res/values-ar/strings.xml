@@ -38,7 +38,7 @@
 
     //depart
     <string name="currentLocation">الموقع الحالي</string>
-    <string name="departing">المغادرة</string>
+    <string name="whereTo">إلى أين؟</string>
     <string name="now">الآن</string>
     <string name="search">إبحث</string>
 
@@ -69,6 +69,12 @@
 
     <string name="hintCity">مثال… غزة</string>
     <string name="hintHome">مثال… بيت نسمة</string>
+
+    <string name="scheduleAride">خطط لرحلة</string>
+
+    <string name="setTime">إختر الوقت</string>
+
+
 
 
 
