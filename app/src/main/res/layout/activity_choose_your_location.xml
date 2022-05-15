@@ -15,16 +15,18 @@
         android:id="@+id/relative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="10dp"
         android:elevation="40dp"
         app:cardCornerRadius="10dp"
         android:background="@color/white"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         >
         <AutoCompleteTextView
             android:id="@+id/tvAutoComplete"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/tv_stroke"
             android:hint="@string/search"
             />
     </androidx.cardview.widget.CardView>
@@ -37,6 +39,23 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_baseline_gps_fixed_24"
+        />
+    <Button
+        android:id="@+id/btnSetLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setLocation"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/tv_stroke"
+        android:backgroundTint="@color/backgroundColor"
+        android:textColor="@color/grayLines"
+        android:layout_alignParentBottom="true"
+
         />
 
 </RelativeLayout>

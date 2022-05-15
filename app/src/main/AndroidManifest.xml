@@ -16,13 +16,31 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
+            android:name=".AccountSettings"
+            android:exported="false" />
+        <activity
+            android:name=".Massages"
+            android:exported="false" />
+        <activity
+            android:name=".Trips"
+            android:exported="false" />
+        <activity
+            android:name=".Wallet"
+            android:exported="false" />
+        <activity
+            android:name=".Help"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileInfo"
+            android:exported="false" />
+        <activity
             android:name=".Fragments.BottomNavFragments.Departures.ForMap.ChooseYourLocation"
             android:exported="false" />
         <activity
-            android:name=".Fragments.MainFragmentActivities.Delivery"
+            android:name=".UI.MainFragmentActivities.Delivery"
             android:exported="false" />
         <activity
-            android:name=".Fragments.MainFragmentActivities.SavedPlaces"
+            android:name=".UI.MainFragmentActivities.SavedPlaces"
             android:exported="false" />
 
         <meta-data
@@ -30,16 +48,16 @@
             android:value="AIzaSyC71tyYpcjT-4CUM3_30mKfk-dPEura0dU" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".VerifyPhone.VerifyVCode"
+            android:name=".UI.VerifyPhone.VerifyVCode"
             android:exported="true" />
         <activity
-            android:name=".VerifyPhone.SendVCode"
+            android:name=".UI.VerifyPhone.SendVCode"
             android:exported="true" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".UI.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CallUS</string>
+    <string name="app_name">Call US</string>
 
 
     <string name="Api_Key" translatable="false">AIzaSyC71tyYpcjT-4CUM3_30mKfk-dPEura0dU</string>
@@ -21,16 +21,6 @@
     <string name="ChooseASavedPlace">Choose a Saved Place</string>
     <string name="deliver">Deliver With Us</string>
 
-    //nav
-    <string name="NavegationDrawer">Navigation Drawer</string>
-    <string name="open">Open</string>
-    <string name="close">Close</string>
-    <string name="scan">Scan QR Code</string>
-    <string name="myProf">My Profile</string>
-    <string name="booking">Booking</string>
-    <string name="contactUs">Contact US</string>
-    <string name="setting">Setting</string>
-    <string name="logOut">Log Out</string>
     //bottom navbar
     <string name="navHome">Home</string>
     <string name="navNearby">Nearby</string>
@@ -40,8 +30,8 @@
     <string name="currentLocation">Current Location</string>
     <string name="whereTo">Where To?</string>
     <string name="now">Now</string>
-    <string name="search">Search</string>
-
+    <string name="requestNow">Request Now</string>
+    <string name="setLocation">Set Location</string>
     //
     <string name="from"> From </string>
     <string name="to"> To </string>
@@ -73,6 +63,51 @@
 
     <string name="scheduleAride">Schedule a Ride</string>
     <string name="setTime">Set Time</string>
+
+    <string name="search">Search</string>
+
+    // info page
+    <string name="help">Help</string>
+    <string name="wallet">Wallet</string>
+    <string name="trips">Trips</string>
+    <string name="massage">Massages</string>
+    <string name="setting">Settings</string>
+
+    //settings
+    <string name="accountSetting">Account Settings</string>
+    <string name="favourites">Favourites</string>
+    <string name="addHome">Add Home</string>
+    <string name="addWork">Add Work</string>
+    <string name="moreSavedPlaces">More Saved Places</string>
+
+    <string name="safety">Safety</string>
+
+    <string name="trustedContacts">Manage Trusted Contacts</string>
+    <string name="descForTrustedContacts">Share your trip status with family and friends \n in a single tap</string>
+
+    <string name="verifyRide">Verify Your Ride</string>
+    <string name="descForVerifyRide">Use a PIN to make sure you get in the right car</string>
+
+    <string name="checkRide">Check Ride</string>
+    <string name="descForCheckRide">Manage your RideCheck notifications</string>
+
+    <string name="family">Family</string>
+
+    <string name="setUpUrFamily">Set up your family</string>
+    <string name="descForSetFamily">Pay for your loved ones and get trip notifications</string>
+
+    <string name="privacy">Privacy</string>
+    <string name="descForPrivacy">Manage the data you share with us</string>
+
+    <string name="security">Security</string>
+    <string name="descForSecurity">Control your account security with 2-step verification</string>
+
+    <string name="logout">Log Out</string>
+
+
+
+
+
 
 
 </resources>

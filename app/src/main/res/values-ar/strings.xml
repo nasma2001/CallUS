@@ -16,20 +16,12 @@
     <string name="resend">اعادة الإرسال</string>
     <string name="verify">التحقق</string>
 
-    //nav drawer
-    <string name="scan">فحص رمز QR</string>
-    <string name="myProf">ملفي الشخصي</string>
-    <string name="booking">الحجوزات</string>
-    <string name="contactUs">تواصل معنا</string>
-    <string name="setting">الإعدادات</string>
-    <string name="logOut">تسجيل الخروج</string>
+
     //wlc fragmant
     <string name="Welcome" >أهلاً بك</string>
     <string name="ChooseASavedPlace" translatable="false">اختر مكانًا محفوظًا</string>
     <string name="deliver">وصل معنا</string>
-    <string name="open">افتح</string>
-    <string name="close">اغلق</string>
-    <string name="NavegationDrawer">NavegationDrawer</string>
+
 
     //bottom navbar
     <string name="navHome">الرئيسية</string>
@@ -40,7 +32,9 @@
     <string name="currentLocation">الموقع الحالي</string>
     <string name="whereTo">إلى أين؟</string>
     <string name="now">الآن</string>
-    <string name="search">إبحث</string>
+    <string name="requestNow"> أطلب الآن</string>
+    <string name="setLocation">إختر المكان</string>
+
 
     <string name="from"> من </string>
     <string name="to"> إلى </string>
@@ -75,6 +69,46 @@
     <string name="setTime">إختر الوقت</string>
 
 
+    <string name="search">إبحث</string>
+
+
+    // info page
+    <string name="help">مساعدة</string>
+    <string name="wallet">المحفظة</string>
+    <string name="trips">الرحلات</string>
+    <string name="massage">الرسائل</string>
+    <string name="setting">الإعدادات</string>
+
+    //settings
+    <string name="accountSetting">إعدادات الحساب</string>
+    <string name="favourites">المفضلة</string>
+    <string name="addHome">أضف بيتاً</string>
+    <string name="addWork">أضف مكان العمل </string>
+    <string name="moreSavedPlaces">المزيد من الأماكن المحفوظة</string>
+
+    <string name="safety">الأمان</string>
+
+    <string name="trustedContacts">تحكم في جهات الاتصال الموثوقة</string>
+    <string name="descForTrustedContacts">شارك حالة الرحلة مع العائلة والأصدقاء بضغطة واحدة</string>
+
+    <string name="verifyRide">تحقق من تفاصيل رحلتك</string>
+    <string name="descForVerifyRide">استخد رقم التعريف الشخصي للتأكد من ركوب السيارة الصحيحة</string>
+
+    <string name="checkRide">تأكد من سير الرحلة</string>
+    <string name="descForCheckRide">تحكم بإشعارات الميزة</string>
+
+    <string name="family">العائلة</string>
+
+    <string name="setUpUrFamily">إعداد الملف التعريفي للعائلة </string>
+    <string name="descForSetFamily">ادفع تكلفة الرحلات للمقربين منك وتلقى إشعارات بخصوص مشاويرهم</string>
+
+    <string name="privacy">الخصوصية</string>
+    <string name="descForPrivacy">تحكم في البيانات التي تشاركها معنا</string>
+
+    <string name="security">الأمان والحماية</string>
+    <string name="descForSecurity">تحكم في أمان الحساب من خلال التحقق بخطوتين</string>
+
+    <string name="logout">تسجيل الخروج</string>
 
 
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/backgroundColor"
-    tools:context=".Fragments.MainFragmentActivities.Delivery">
+    tools:context=".UI.MainFragmentActivities.Delivery">
 
     <include
         android:id="@+id/include"
@@ -43,12 +43,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:drawablePadding="2dp"
         android:padding="10dp"
-        android:text="@string/when"
+        android:text="@string/setTime"
         android:textColor="@color/grayLines"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvTo"
-        app:layout_constraintTop_toBottomOf="@+id/tvTo" />
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_baseline_arrow"
+        app:drawableTint="@color/grayLines"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="@+id/tvWay"
+        app:layout_constraintTop_toBottomOf="@+id/tvWay" />
 
     <TextView
         android:id="@+id/tvWay"
@@ -60,8 +66,8 @@
         android:textColor="@color/grayLines"
         android:gravity="center"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvWhen"
-        app:layout_constraintTop_toBottomOf="@+id/tvWhen" />
+        app:layout_constraintStart_toStartOf="@+id/tvTo"
+        app:layout_constraintTop_toBottomOf="@+id/tvTo" />
 
     <EditText
         android:id="@+id/etForm"
@@ -69,12 +75,15 @@
         android:layout_marginHorizontal="40dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:focusable="false"
         android:padding="10dp"
         android:background="@drawable/tv_stroke"
         android:textColor="@color/grayLines"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvTo"
-        app:layout_constraintTop_toTopOf="@+id/tvForm" />
+        app:layout_constraintTop_toTopOf="@+id/tvForm"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/etTo"
@@ -82,27 +91,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:focusable="false"
         android:textColor="@color/grayLines"
         android:background="@drawable/tv_stroke"
         android:inputType="textPersonName"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="@+id/etForm"
         app:layout_constraintStart_toStartOf="@+id/etForm"
-        app:layout_constraintTop_toBottomOf="@+id/etForm" />
+        app:layout_constraintTop_toBottomOf="@+id/etForm"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
-    <EditText
-        android:id="@+id/etWhen"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColor="@color/grayLines"
-        android:background="@drawable/tv_stroke"
-        app:layout_constraintEnd_toEndOf="@+id/etTo"
-        app:layout_constraintStart_toStartOf="@+id/etTo"
-        app:layout_constraintTop_toBottomOf="@+id/etTo" />
 
     <Spinner
         android:id="@+id/spnWays"
@@ -111,5 +110,24 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/tvWay"
         app:layout_constraintTop_toTopOf="@+id/tvWay" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/requestNow"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/tv_stroke"
+        android:backgroundTint="@color/grayLines"
+        android:textColor="@color/backgroundColor"
+        app:layout_constraintTop_toBottomOf="@id/tvWay"
+        app:layout_constraintStart_toStartOf="@id/tvForm"
+        app:layout_constraintEnd_toEndOf="@id/etForm"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

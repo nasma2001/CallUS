@@ -1,8 +1,4 @@
-package com.example.callus.VerifyPhone;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.callus.UI.VerifyPhone;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,20 +11,26 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.callus.MainActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.callus.R;
+import com.example.callus.UI.MainActivity;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
 public class VerifyVCode extends AppCompatActivity {
+
     private EditText code1,code2,code3,code4,code5,code6;
-    private TextView number;
+    private TextView number, resend;
     Button btnVerify;
     ProgressBar progressBar;
+
     String verificationId;
-    TextView resend;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,12 +48,14 @@ public class VerifyVCode extends AppCompatActivity {
         btnVerify.setOnClickListener(view -> {
             if(code1.getText().toString().isEmpty()||code2.getText().toString().isEmpty()||
                     code3.getText().toString().isEmpty()||code4.getText().toString().isEmpty()||
-            code5.getText().toString().isEmpty()||code6.getText().toString().isEmpty()){
+                    code5.getText().toString().isEmpty()||code6.getText().toString().isEmpty()){
+
                 Toast.makeText(this, "Enter valid code", Toast.LENGTH_SHORT).show();
             }
             if(verificationId !=null){
                progressBar.setVisibility(View.VISIBLE);
                btnVerify.setVisibility(View.INVISIBLE);
+
                verifyCode(code1.getText().toString()+
                          code2.getText().toString()+
                          code3.getText().toString()+
@@ -94,15 +98,16 @@ public class VerifyVCode extends AppCompatActivity {
             Toast.makeText(VerifyVCode.this, "code sent", Toast.LENGTH_SHORT).show();
         }
     };
+
     private void verifyCode(String code){
         PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential(verificationId,code);
         signINByCredential(phoneAuthCredential);
     }
     private void signINByCredential(PhoneAuthCredential phoneAuthCredential) {
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+
         firebaseAuth.signInWithCredential(phoneAuthCredential).
                 addOnCompleteListener(task -> {
-
                     progressBar.setVisibility(View.GONE);
                     btnVerify.setVisibility(View.VISIBLE);
 

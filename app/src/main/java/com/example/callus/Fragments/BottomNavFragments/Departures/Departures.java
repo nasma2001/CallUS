@@ -1,8 +1,17 @@
 package com.example.callus.Fragments.BottomNavFragments.Departures;
 
-import android.annotation.SuppressLint;
-import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
+import static com.example.callus.ReusableFunctions.Constants.CURRENT_LOCATION_CHOOSE_LOCATION;
+import static com.example.callus.ReusableFunctions.Constants.DEFINE_CHOOSE_LOCATION;
+import static com.example.callus.ReusableFunctions.Constants.RESULT_LAT;
+import static com.example.callus.ReusableFunctions.Constants.RESULT_LNG;
+import static com.example.callus.ReusableFunctions.Constants.WHERE_TO_CHOOSE_LOCATION;
+import static com.example.callus.ReusableFunctions.ReusableFunctions.getAddressFromLatLng;
+import static com.example.callus.ReusableFunctions.ReusableFunctions.getCurrentDate;
+import static com.example.callus.ReusableFunctions.ReusableFunctions.getCurrentTime;
+import static com.example.callus.ReusableFunctions.ReusableFunctions.popDatePicker;
+import static com.example.callus.ReusableFunctions.ReusableFunctions.popTimePicker;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,27 +20,26 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
 import com.example.callus.Fragments.BottomNavFragments.Departures.ForMap.ChooseYourLocation;
 import com.example.callus.R;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
 public class Departures extends Fragment {
-    EditText etCurrentLocation;
+    //Views
+    EditText etCurrentLocation, etWhereTo;
     Button btnSearch;
     TextView tvTime, tvBtmSheetDate, tvBtmSheetTime;
     BottomSheetDialog sheetDialog;
     View bottomSheet;
     Button btnSetTime;
-    int hour, min, day, year, month;
-//    String month;
+
+    //Vars
+    Bundle bundle;
 
     public Departures() {
         // Required empty public constructor
@@ -51,21 +59,40 @@ public class Departures extends Fragment {
         return v;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        getDateFromBundle();
+    }
+
+    private void getDateFromBundle() {
+        bundle = getArguments();
+        if(bundle != null){
+            Toast.makeText(getActivity(), "0000", Toast.LENGTH_SHORT).show();
+            double longitude = bundle.getDouble("lang");
+            double latitude = bundle.getDouble("lat");
+            String view = bundle.getString("view");
+            String res = longitude+", "+latitude;
+            if(view.equals(CURRENT_LOCATION_CHOOSE_LOCATION))
+                etCurrentLocation.setText(res);
+            else if (view.equals(WHERE_TO_CHOOSE_LOCATION))
+                etWhereTo.setText(res);
+        }
+    }
+
     private void listeners() {
-        etCurrentLocation.setOnClickListener(view -> startActivity(new Intent(getActivity(), ChooseYourLocation.class)));
+        etCurrentLocation.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(), ChooseYourLocation.class);
+            intent.putExtra(DEFINE_CHOOSE_LOCATION, CURRENT_LOCATION_CHOOSE_LOCATION);
+            startActivityForResult(intent,100);
+        });
+        etWhereTo.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(), ChooseYourLocation.class);
+            intent.putExtra(DEFINE_CHOOSE_LOCATION, WHERE_TO_CHOOSE_LOCATION);
+            startActivityForResult(intent,101);
+        });
 
         tvTime.setOnClickListener(view -> showBottomSheet());
-    }
-
-    private String getCurrentTime() {
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat mdFormat = new SimpleDateFormat("HH:mm");
-        return mdFormat.format(Calendar.getInstance().getTime());
-    }
-
-    public String getCurrentDate() {
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat mdFormat = new SimpleDateFormat("MMMM-d");
-        Date d = Calendar.getInstance().getTime();
-        return mdFormat.format(d);
     }
 
     private void showBottomSheet() {
@@ -74,68 +101,30 @@ public class Departures extends Fragment {
         tvBtmSheetTime.setText(getCurrentTime());
         tvBtmSheetDate.setText(getCurrentDate());
 
-        tvBtmSheetDate.setOnClickListener(view -> popDatePicker());
-
-        tvBtmSheetTime.setOnClickListener(view -> popTimePicker());
-
-        btnSetTime.setOnClickListener(view -> {
-            String date = tvBtmSheetDate.getText()+",  at "+tvBtmSheetTime.getText();
-            tvTime.setText(date);
-            sheetDialog.dismiss();
-        });
+        BtmSheetListeners();
 
         sheetDialog.setContentView(bottomSheet);
         sheetDialog.show();
     }
 
-    private void popDatePicker() {
-        DatePickerDialog.OnDateSetListener listener = (datePicker, year, month, day) -> {
-            this.year = year;
-            this.month = month + 1;
-            this.day = day;
-            tvBtmSheetDate.setText(makeDateString(day, month, year));
-        };
-        Calendar calendar = Calendar.getInstance();
-
-        DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), listener,
-                calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1,
-                calendar.get(Calendar.DAY_OF_MONTH));
-        datePickerDialog.show();
-    }
-
-    private String makeDateString(int day, int month, int year) {
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat mdFormat = new SimpleDateFormat("MMMM-d");
-        Date d = new Date(year, month, day);
-        return mdFormat.format(d);
-    }
-
-    private void popTimePicker() {
-        TimePickerDialog.OnTimeSetListener listener = (timePicker, hours, minutes) -> {
-            String amPm;
-            hour = hours;
-            min = minutes;
-            if (hours <12)
-                amPm = "AM";
-            else {
-                amPm = "PM";
-                hour-=12;
-            }
-            String time = String.format(Locale.getDefault(), "%02d:%02d", hour, min)+" "+amPm;
-            tvBtmSheetTime.setText(time);
-        };
-
-        TimePickerDialog timePickerDialog = new TimePickerDialog(getContext()
-                , listener, hour, min, false);
-        timePickerDialog.show();
+    private void BtmSheetListeners() {
+        tvBtmSheetDate.setOnClickListener(view -> popDatePicker(tvBtmSheetDate,getContext()));
+        tvBtmSheetTime.setOnClickListener(view -> popTimePicker(tvBtmSheetTime,getContext()));
+        btnSetTime.setOnClickListener(view -> {
+            String date = tvBtmSheetDate.getText() + ",  at " + tvBtmSheetTime.getText();
+            tvTime.setText(date);
+            sheetDialog.dismiss();
+        });
     }
 
     private void inflate(View v) {
         etCurrentLocation = v.findViewById(R.id.etCurrentLocation);
+        etWhereTo = v.findViewById(R.id.etWhereTo);
         btnSearch = v.findViewById(R.id.btnSearch);
         tvTime = v.findViewById(R.id.tvTimeDeparting);
     }
 
-    private void inflateForBottomSheet() {
+     public void inflateForBottomSheet() {
         bottomSheet = LayoutInflater.from(getContext())
                 .inflate(R.layout.bottom_sheet_departures, getActivity()
                         .findViewById(R.id.bottomSheetContainerDepartures));
@@ -146,4 +135,20 @@ public class Departures extends Fragment {
         tvBtmSheetTime = bottomSheet.findViewById(R.id.tvTimeBottomSheet);
         btnSetTime = bottomSheet.findViewById(R.id.btnSetTime);
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Bundle bundle=data.getExtras();
+        LatLng latLng = new LatLng(bundle.getDouble(RESULT_LAT),bundle.getDouble(RESULT_LNG));
+        String result = getAddressFromLatLng(latLng, getActivity())[0]+", "+ getAddressFromLatLng(latLng,getActivity())[1];
+
+        if(requestCode == 100 && resultCode == Activity.RESULT_OK) {
+            etCurrentLocation.setText(result);
+        }
+        else if ((requestCode == 101 && resultCode == Activity.RESULT_OK)){
+            etWhereTo.setText(result);
+        }
+    }
+
 }

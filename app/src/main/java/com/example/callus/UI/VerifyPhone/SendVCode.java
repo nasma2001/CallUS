@@ -1,8 +1,4 @@
-package com.example.callus.VerifyPhone;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.callus.UI.VerifyPhone;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.callus.R;
 import com.google.firebase.FirebaseException;
@@ -23,6 +23,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import java.util.concurrent.TimeUnit;
 
 public class SendVCode extends AppCompatActivity {
+    //views
     Button btnContinue;
     EditText etPhoneNumber;
     ProgressBar progressBar;
@@ -31,7 +32,6 @@ public class SendVCode extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_phone_number);
-
 
         //inflate views
         inflate();
@@ -45,7 +45,6 @@ public class SendVCode extends AppCompatActivity {
                 firebasePhoneNumAuth(phone,SendVCode.this,mCallbacks);
             } else
                 Toast.makeText(this, "Enter a valid number", Toast.LENGTH_SHORT).show();
-
         });
 
         // hide action bar

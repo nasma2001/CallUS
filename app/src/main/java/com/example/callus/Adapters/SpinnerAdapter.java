@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.callus.R;
 
 public class SpinnerAdapter extends ArrayAdapter<String> {
+    //vars
     private final Context context;
     private final String[] contentArray;
     private final Integer[] imageArray;
