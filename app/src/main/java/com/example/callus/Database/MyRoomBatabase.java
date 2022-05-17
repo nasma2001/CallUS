@@ -38,7 +38,7 @@ public abstract class MyRoomBatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
-    // يتم استدعائها عن انشاء DB لاول مرة
+    // يتم استدعائها عند انشاء DB لاول مرة
     private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
