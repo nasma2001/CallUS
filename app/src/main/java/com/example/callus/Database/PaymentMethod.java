@@ -6,7 +6,7 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 @Entity(foreignKeys = {@ForeignKey(entity = UserInfo.class,
-        parentColumns = "phone", childColumns = "userID", onDelete = ForeignKey.CASCADE,
+        parentColumns = "phone", childColumns = "phone", onDelete = ForeignKey.CASCADE,
         onUpdate = ForeignKey.CASCADE)})
 public class PaymentMethod {
     @PrimaryKey
@@ -16,13 +16,13 @@ public class PaymentMethod {
     @NonNull
     long cardNum;
     @NonNull
-    long userID;
+    String phone;
 
-    public PaymentMethod(int id, @NonNull String type, long cardNum, long userID) {
+    public PaymentMethod(int id, @NonNull String type, long cardNum, String phone) {
         this.id = id;
         this.type = type;
         this.cardNum = cardNum;
-        this.userID = userID;
+        this.phone = phone;
     }
 
     public int getId() {
@@ -50,11 +50,11 @@ public class PaymentMethod {
         this.cardNum = cardNum;
     }
 
-    public long getUserID() {
-        return userID;
+    public String getUserID() {
+        return phone;
     }
 
-    public void setUserID(long userID) {
-        this.userID = userID;
+    public void setUserID(String phone) {
+        this.phone = phone;
     }
 }

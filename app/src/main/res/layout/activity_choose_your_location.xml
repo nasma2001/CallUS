@@ -30,31 +30,32 @@
             android:hint="@string/search"
             />
     </androidx.cardview.widget.CardView>
+
     <ImageView
         android:id="@+id/ivGps"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
         android:layout_below="@id/relative"
-        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
-        android:src="@drawable/ic_baseline_gps_fixed_24"
-        />
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_baseline_gps_fixed_24" />
+
     <Button
         android:id="@+id/btnSetLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/setLocation"
-        android:textAllCaps="false"
-        android:padding="10dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="10dp"
         android:layout_marginBottom="20dp"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:background="@drawable/tv_stroke"
-        android:backgroundTint="@color/backgroundColor"
-        android:textColor="@color/grayLines"
-        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:padding="10dp"
+        android:text="@string/setLocation"
+        android:textAllCaps="false"
+        android:textColor="@color/backgroundColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
 
         />
 

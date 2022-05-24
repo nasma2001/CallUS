@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 
+import com.example.callus.R;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.io.IOException;
@@ -22,10 +23,15 @@ import java.util.Locale;
 
 public class ReusableFunctions {
 
-    public static void actionBar(String title , ActionBar actionBar,boolean backIsEnabled,TextView textView){
+    public static void actionBar(String title , ActionBar actionBar,boolean backIsEnabled,
+                                 TextView textView){
         if (actionBar != null) {
             actionBar.setDisplayShowTitleEnabled(false);
-            actionBar.setDisplayHomeAsUpEnabled(backIsEnabled);
+            actionBar.setDisplayShowHomeEnabled(false);
+           if(backIsEnabled){
+               actionBar.setDisplayHomeAsUpEnabled(true);
+               actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+           }
             textView.setText(title);
             actionBar.setElevation(4);
         }

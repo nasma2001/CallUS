@@ -5,25 +5,20 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Saved Places", foreignKeys = {@ForeignKey(entity = UserInfo.class,
-        parentColumns = "phone", childColumns = "userID", onDelete = ForeignKey.CASCADE,
+        parentColumns = "phone", childColumns = "phone", onDelete = ForeignKey.CASCADE,
         onUpdate = ForeignKey.CASCADE)})
 public class SavedPlacesModel {
 
-    private String city, street, home;
-
     @PrimaryKey(autoGenerate = true)
     private int id;
+    private String city, street, home, phone;
 
-    private long userID;
 
-    public SavedPlacesModel(String city, String street, String home,long userID) {
+    public SavedPlacesModel(String city, String street, String home, String phone) {
         this.city = city;
         this.street = street;
         this.home = home;
-        this.userID = userID;
-    }
-
-    public SavedPlacesModel() {
+        this.phone = phone;
     }
 
     public int getId() {
@@ -58,11 +53,11 @@ public class SavedPlacesModel {
         this.home = home;
     }
 
-    public long getUserID() {
-        return userID;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setUserID(long userID) {
-        this.userID = userID;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

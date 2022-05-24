@@ -9,36 +9,41 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.callus.Database.MyViewModel;
 import com.example.callus.Database.SavedPlacesModel;
 import com.example.callus.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class SavedPlaceAdapter extends RecyclerView.Adapter<SavedPlaceAdapter.savedPlaceViewHolder>{
 
     //vars
     Activity activity;
-    ArrayList<SavedPlacesModel> savedPlaceData;
+    List<SavedPlacesModel> savedPlaceData;
+    private final MyViewModel viewModel;
 
-    public SavedPlaceAdapter(Activity activity, ArrayList<SavedPlacesModel> savedPlaceData) {
+    public SavedPlaceAdapter(Activity activity,List<SavedPlacesModel> savedPlaceData, MyViewModel viewModel) {
         this.activity = activity;
         this.savedPlaceData = savedPlaceData;
+        this.viewModel = viewModel;
     }
 
 
     @NonNull
     @Override
     public savedPlaceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_savedplace, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_savedplace,
+                parent, false);
         return new savedPlaceViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull savedPlaceViewHolder holder, int position) {
-        SavedPlacesModel cat = savedPlaceData.get(position);
-        holder.tvCity.setText(cat.getCity());
-        holder.tvStreet.setText(cat.getStreet());
-        holder.tvHome.setText(cat.getHome());
+        SavedPlacesModel place = savedPlaceData.get(position);
+
+        holder.tvCity.setText(place.getCity());
+        holder.tvStreet.setText(place.getStreet());
+        holder.tvHome.setText(place.getHome());
 
     }
 

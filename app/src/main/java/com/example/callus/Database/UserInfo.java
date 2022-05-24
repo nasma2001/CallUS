@@ -1,38 +1,37 @@
 package com.example.callus.Database;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.TypeConverters;
 
 import java.util.Date;
 
 @Entity
-@TypeConverters(DateConverter.class)
 public class UserInfo {
     @PrimaryKey
-    long phone;
-    Date dateJoined;
-    String address;
+    @NonNull
+    String phone;
+    long dateJoined;
 
-    public UserInfo(int phone, String address,Date dateJoined) {
+    public UserInfo(String phone) {
         this.phone = phone;
-        this.address = address;
-        this.dateJoined = dateJoined;
+        this.dateJoined = new Date().getTime();
     }
 
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public String getAddress() {
-        return address;
+    public long getDateJoined() {
+        return dateJoined;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setDateJoined(long dateJoined) {
+        this.dateJoined = dateJoined;
     }
+
 }

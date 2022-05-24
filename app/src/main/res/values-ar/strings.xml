@@ -105,10 +105,16 @@
     <string name="privacy">الخصوصية</string>
     <string name="descForPrivacy">تحكم في البيانات التي تشاركها معنا</string>
 
+
+
     <string name="security">الأمان والحماية</string>
     <string name="descForSecurity">تحكم في أمان الحساب من خلال التحقق بخطوتين</string>
 
     <string name="logout">تسجيل الخروج</string>
+
+    <string name="cash">كاش</string>
+    <string name="payment">طرق الدفع</string>
+    <string name="addPayment">إضافة طريقة للدفع</string>
 
 
 

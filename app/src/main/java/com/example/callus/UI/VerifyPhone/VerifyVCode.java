@@ -14,7 +14,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
+import com.example.callus.Database.MyViewModel;
+import com.example.callus.Database.UserInfo;
 import com.example.callus.R;
 import com.example.callus.UI.MainActivity;
 import com.google.firebase.FirebaseException;
@@ -22,12 +25,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
+import java.util.Objects;
+
 public class VerifyVCode extends AppCompatActivity {
 
     private EditText code1,code2,code3,code4,code5,code6;
     private TextView number, resend;
     Button btnVerify;
     ProgressBar progressBar;
+    MyViewModel model;
 
     String verificationId;
 
@@ -115,6 +121,10 @@ public class VerifyVCode extends AppCompatActivity {
                         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
                         getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                                 .edit().putBoolean("hasVerified",true).apply();
+                        model = new ViewModelProvider(VerifyVCode.this).get(MyViewModel.class);
+                        UserInfo info = new UserInfo(Objects.requireNonNull(FirebaseAuth.getInstance()
+                                .getCurrentUser()).getPhoneNumber());
+                        model.insertUserInfo(info);
                         Intent i = new Intent(this, MainActivity.class);
                         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(i);
@@ -135,6 +145,9 @@ public class VerifyVCode extends AppCompatActivity {
         resend = findViewById(R.id.tvResend);
         progressBar=findViewById(R.id.pbVerify);
         btnVerify = findViewById(R.id.btnVerifyPhone);
+
+        model = new ViewModelProvider(this).get(MyViewModel.class);
+
     }
     private void addVerificationInputs(){
         code1.addTextChangedListener(new TextWatcher() {

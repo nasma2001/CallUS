@@ -8,17 +8,16 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-public class ViewModel extends AndroidViewModel {
+public class MyViewModel extends AndroidViewModel {
     Repository repository;
 
-    public ViewModel(@NonNull Application application) {
+    public MyViewModel(@NonNull Application application) {
         super(application);
         repository = new Repository(application);
-
     }
 
-    public void insertUserInfoe(UserInfo... userInfo) {
-        repository.insertUserInfoe(userInfo);
+    public void insertUserInfo(UserInfo... userInfo) {
+        repository.insertUserInfo(userInfo);
     }
 
     public void updateUserInfo(UserInfo... userInfo) {
@@ -30,9 +29,9 @@ public class ViewModel extends AndroidViewModel {
     }
 
     public LiveData<List<UserInfo>> getAllUserInfo() {
-
         return repository.getAllUserInfo();
     }
+
 
     // SavedPlacesModel DAO
     public void insertSavedPlacesModel(SavedPlacesModel... SavedPlacesModel) {

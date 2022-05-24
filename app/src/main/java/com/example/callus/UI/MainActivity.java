@@ -13,7 +13,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModelProvider;
 
+import com.example.callus.Database.MyViewModel;
 import com.example.callus.Fragments.BottomNavFragments.Departures.Departures;
 import com.example.callus.Fragments.BottomNavFragments.MainFragment;
 import com.example.callus.Fragments.BottomNavFragments.NearbyFragment;
@@ -30,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     TextView appbarTitle;
     ImageView profile;
+
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
 
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
@@ -51,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
         //initiate listeners
         initListeners();
 
-
-
     }
 
     private void initListeners() {
@@ -68,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolBar);
         appbarTitle = toolbar.findViewById(R.id.toolbar_title);
         profile = toolbar.findViewById(R.id.ivProfile);
+
+
     }
 
     @SuppressLint("NonConstantResourceId")

@@ -3,10 +3,6 @@ package com.example.callus.Database;
 import android.app.Application;
 
 import androidx.lifecycle.LiveData;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.Query;
-import androidx.room.Update;
 
 import java.util.List;
 
@@ -17,7 +13,7 @@ public class Repository {
     MyTripsDAO myTripsDAO;
 
     public Repository(Application application) {
-        MyRoomBatabase db = MyRoomBatabase.getDatabase(application);
+        MyRoomDatabase db = MyRoomDatabase.getDatabase(application);
         userInfoDAO = db.userInfoDAO();
         savedPlacesModelDAO = db.savedPlacesModelDAO();
         paymentMethodDOA = db.paymentMethodDOA();
@@ -25,31 +21,16 @@ public class Repository {
     }
 
     // UserInfo DAO
-    public void insertUserInfoe(UserInfo... userInfo) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                userInfoDAO.insertUserInfoe(userInfo);
-            }
-        });
+    public void insertUserInfo(UserInfo... userInfo) {
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> userInfoDAO.insertUserInfo(userInfo));
     }
 
     public void updateUserInfo(UserInfo... userInfo) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                userInfoDAO.updateUserInfo(userInfo);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> userInfoDAO.updateUserInfo(userInfo));
     }
 
     public void deleteUserInfo(UserInfo... userInfo) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                userInfoDAO.deleteUserInfo(userInfo);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> userInfoDAO.deleteUserInfo(userInfo));
     }
 
     public LiveData<List<UserInfo>> getAllUserInfo() {
@@ -58,30 +39,15 @@ public class Repository {
 
     // SavedPlacesModel DAO
     public void insertSavedPlacesModel(SavedPlacesModel... SavedPlacesModel) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                savedPlacesModelDAO.insertSavedPlacesModel(SavedPlacesModel);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> savedPlacesModelDAO.insertSavedPlacesModel(SavedPlacesModel));
     }
 
     public void updateSavedPlacesModel(SavedPlacesModel... SavedPlacesModel) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                savedPlacesModelDAO.updateSavedPlacesModel(SavedPlacesModel);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> savedPlacesModelDAO.updateSavedPlacesModel(SavedPlacesModel));
     }
 
     public void deleteSavedPlacesModel(SavedPlacesModel... SavedPlacesModel) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                savedPlacesModelDAO.deleteSavedPlacesModel(SavedPlacesModel);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> savedPlacesModelDAO.deleteSavedPlacesModel(SavedPlacesModel));
     }
 
     public LiveData<List<SavedPlacesModel>> getAllSavedPlacesModel() {
@@ -90,30 +56,15 @@ public class Repository {
 
     // PaymentMethod DOA
     public void insertPaymentMethod(PaymentMethod... PaymentMethod) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                paymentMethodDOA.insertPaymentMethod(PaymentMethod);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> paymentMethodDOA.insertPaymentMethod(PaymentMethod));
     }
 
     public void updatePaymentMethod(PaymentMethod... PaymentMethod) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                paymentMethodDOA.updatePaymentMethod(PaymentMethod);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> paymentMethodDOA.updatePaymentMethod(PaymentMethod));
     }
 
     public void deletePaymentMethod(PaymentMethod... PaymentMethod) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                paymentMethodDOA.deletePaymentMethod(PaymentMethod);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> paymentMethodDOA.deletePaymentMethod(PaymentMethod));
     }
 
     public LiveData<List<PaymentMethod>> getAllPaymentMethod() {
@@ -123,30 +74,15 @@ public class Repository {
 
     // MyTripsDAO
     public void insertMyTrips(MyTrips... MyTrips) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                myTripsDAO.insertMyTrips(MyTrips);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> myTripsDAO.insertMyTrips(MyTrips));
     }
 
     public void updateMyTrips(MyTrips... MyTrips) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                myTripsDAO.updateMyTrips(MyTrips);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> myTripsDAO.updateMyTrips(MyTrips));
     }
 
     public void deleteMyTrips(MyTrips... MyTrips) {
-        MyRoomBatabase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                myTripsDAO.deleteMyTrips(MyTrips);
-            }
-        });
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> myTripsDAO.deleteMyTrips(MyTrips));
     }
 
     public LiveData<List<MyTrips>> getAllMyTrips() {
