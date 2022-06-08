@@ -13,14 +13,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.callus.Database.MyViewModel;
 import com.example.callus.Fragments.BottomNavFragments.Departures.Departures;
 import com.example.callus.Fragments.BottomNavFragments.MainFragment;
 import com.example.callus.Fragments.BottomNavFragments.NearbyFragment;
-import com.example.callus.ProfileInfo;
 import com.example.callus.R;
+import com.example.callus.UI.profile.ProfileInfo;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -35,18 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-    }
-
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //load the main fragment first
         loadFragment(new MainFragment());
         //inflate
@@ -106,8 +97,5 @@ public class MainActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
     }
-
-
-
 
 }

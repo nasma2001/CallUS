@@ -45,7 +45,9 @@ public class MyViewModel extends AndroidViewModel {
     public void deleteSavedPlacesModel(SavedPlacesModel... SavedPlacesModel) {
         repository.deleteSavedPlacesModel(SavedPlacesModel);
     }
-
+    public void deletePlaceById(int id){
+        repository.deletePlaceByID(id);
+    }
     public LiveData<List<SavedPlacesModel>> getAllSavedPlacesModel() {
         return repository.getAllSavedPlacesModel();
     }
@@ -67,6 +69,17 @@ public class MyViewModel extends AndroidViewModel {
         return repository.getAllPaymentMethod();
 
     }
+    public int getPaymentIDByCardNumber(String cardNum){
+        return repository.getPaymentIDByCardNumber(cardNum);
+    }
+    public int getMoneyFromCardNumber(String cardNum){
+        return  repository.getMoneyFromCardNumber(cardNum);
+    }
+    public void updateMoney(String cardNum, int totalMoney){
+        repository.updateMoney(cardNum,totalMoney);
+    }
+
+
 
     // MyTripsDAO
     public void insertMyTrips(MyTrips... MyTrips) {
@@ -85,4 +98,31 @@ public class MyViewModel extends AndroidViewModel {
         return repository.getAllMyTrips();
     }
 
+    //Requests
+    public void insertRequest(Requests... requests){
+        repository.insertRequest(requests);
+    }
+    public void updateRequest(Requests... requests){
+        repository.updateRequest(requests);
+    }
+    public void deleteRequest(Requests... requests){
+        repository.deleteRequest(requests);
+    }
+    public LiveData<List<Requests>> getAllRequests(){
+        return repository.getAllRequest();
+    }
+
+    //RequestsRide
+    public void insertRequestRide(RequestRide... requests){
+        repository.insertRequestRide(requests);
+    }
+    public void updateRequestRide(RequestRide... requests){
+        repository.updateRequestRide(requests);
+    }
+    public void deleteRequestRide(RequestRide... requests){
+        repository.deleteRequestRide(requests);
+    }
+    public LiveData<List<RequestRide>> getAllRequestRide(){
+        return repository.getAllRequestRide();
+    }
 }

@@ -20,6 +20,12 @@ public interface PaymentMethodDOA {
     void deletePaymentMethod(PaymentMethod... PaymentMethod);
     @Query("select * from PaymentMethod ")
     LiveData<List<PaymentMethod>> getAllPaymentMethod();
+    @Query("select id from PaymentMethod where cardNum = :cardNum")
+    int getPaymentIDByCardNumber(String cardNum);
+    @Query("select totalMoney from PaymentMethod where cardNum = :cardNum")
+    int getMoneyFromCardNumber(String cardNum);
+    @Query("update PaymentMethod set totalMoney = :totalMoney where cardNum =:cardNum")
+    void updateMoney(String cardNum, int totalMoney);
 
 
 

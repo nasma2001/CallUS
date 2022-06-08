@@ -9,20 +9,21 @@ import androidx.room.PrimaryKey;
         parentColumns = "phone", childColumns = "phone", onDelete = ForeignKey.CASCADE,
         onUpdate = ForeignKey.CASCADE)})
 public class PaymentMethod {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     int id;
     @NonNull
     String type;
     @NonNull
-    long cardNum;
+    String cardNum;
     @NonNull
     String phone;
+    int totalMoney;
 
-    public PaymentMethod(int id, @NonNull String type, long cardNum, String phone) {
-        this.id = id;
+    public PaymentMethod( @NonNull String type, @NonNull String cardNum, @NonNull String phone) {
         this.type = type;
         this.cardNum = cardNum;
         this.phone = phone;
+        totalMoney = 1000;
     }
 
     public int getId() {
@@ -42,11 +43,12 @@ public class PaymentMethod {
         this.type = type;
     }
 
-    public long getCardNum() {
+    @NonNull
+    public String getCardNum() {
         return cardNum;
     }
 
-    public void setCardNum(long cardNum) {
+    public void setCardNum(String cardNum) {
         this.cardNum = cardNum;
     }
 

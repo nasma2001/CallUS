@@ -20,6 +20,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="100dp"
         android:text="@string/from"
+        android:textStyle="bold"
         android:padding="10dp"
         android:textColor="@color/grayLines"
         android:textSize="18sp"
@@ -33,6 +34,7 @@
         android:layout_marginTop="20dp"
         android:padding="10dp"
         android:text="@string/to"
+        android:textStyle="bold"
         android:textColor="@color/grayLines"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/tvForm"
@@ -64,6 +66,7 @@
         android:padding="10dp"
         android:text="@string/choose_the_way"
         android:textColor="@color/grayLines"
+        android:textStyle="bold"
         android:gravity="center"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/tvTo"
@@ -112,7 +115,7 @@
         app:layout_constraintTop_toTopOf="@+id/tvWay" />
 
     <Button
-        android:id="@+id/btnSearch"
+        android:id="@+id/btnRequest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/requestNow"
@@ -125,9 +128,30 @@
         android:background="@drawable/tv_stroke"
         android:backgroundTint="@color/grayLines"
         android:textColor="@color/backgroundColor"
-        app:layout_constraintTop_toBottomOf="@id/tvWay"
-        app:layout_constraintStart_toStartOf="@id/tvForm"
-        app:layout_constraintEnd_toEndOf="@id/etForm"
+        app:layout_constraintTop_toBottomOf="@id/tvWhen"
+        app:layout_constraintStart_toStartOf="@id/tvWay"
+        app:layout_constraintEnd_toEndOf="@id/etTo"
         />
+    <TextView
+        android:id="@+id/tvDistanceDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/btnRequest"
+        app:layout_constraintTop_toBottomOf="@id/btnRequest"
+        app:layout_constraintEnd_toEndOf="@id/btnRequest"
+        android:layout_marginTop="80dp"
+        android:textSize="27sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tvPriceDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tvDistanceDelivery"
+        app:layout_constraintTop_toBottomOf="@id/tvDistanceDelivery"
+        app:layout_constraintEnd_toEndOf="@id/tvDistanceDelivery"
+        android:layout_marginTop="20dp"
+        android:textSize="27sp"
+        android:textColor="@color/black"
+        app:drawableTint="@color/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

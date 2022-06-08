@@ -49,8 +49,15 @@
                 app:layout_constraintStart_toEndOf="@+id/tvItemStreet"
                 app:layout_constraintTop_toTopOf="@+id/tvItemStreet" />
 
-
-
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvItemCity"
+                android:src="@drawable/ic_baseline_delete_outline_24"
+                app:layout_constraintBottom_toBottomOf="@id/tvItemHome"
+                android:layout_marginEnd="10dp"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

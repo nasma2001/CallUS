@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -44,6 +45,11 @@ public class SavedPlaceAdapter extends RecyclerView.Adapter<SavedPlaceAdapter.sa
         holder.tvCity.setText(place.getCity());
         holder.tvStreet.setText(place.getStreet());
         holder.tvHome.setText(place.getHome());
+        holder.delete.setOnClickListener(view -> {
+            viewModel.deletePlaceById(savedPlaceData.get(position).getId());
+            savedPlaceData.remove(position);
+            notifyDataSetChanged();
+        });
 
     }
 
@@ -56,12 +62,13 @@ public class SavedPlaceAdapter extends RecyclerView.Adapter<SavedPlaceAdapter.sa
 
     public static class savedPlaceViewHolder extends RecyclerView.ViewHolder {
         TextView tvCity, tvStreet,tvHome;
+        ImageView delete;
         public savedPlaceViewHolder(@NonNull View itemView) {
             super(itemView);
             tvCity = itemView.findViewById(R.id.tvItemCity);
             tvStreet = itemView.findViewById(R.id.tvItemStreet);
             tvHome = itemView.findViewById(R.id.tvItemHome);
-
+            delete = itemView.findViewById(R.id.btnDelete);
         }
     }
 

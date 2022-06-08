@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,10 +50,10 @@ public class ChooseYourLocation extends AppCompatActivity {
     ImageView ivGps;
     AutoCompleteTextView search;
     Button btnSetLocation;
-    //
+    //vars
     Marker marker;
-    LatLng latLngMyLocation,finalLocationForCurrent,finalLocationForWhereTo,
-            finalLocationForSavedPlaces,finalLocationForWhereDeliver,finalLocationForToDeliver;
+    LatLng latLngMyLocation, finalLocationForCurrent, finalLocationForWhereTo,
+            finalLocationForSavedPlaces, finalLocationForWhereDeliver, finalLocationForToDeliver;
     SupportMapFragment supportMapFragment;
     FusedLocationProviderClient client;
     GoogleMap mMap;
@@ -97,49 +98,70 @@ public class ChooseYourLocation extends AppCompatActivity {
 
             switch (definer) {
                 case CURRENT_LOCATION_CHOOSE_LOCATION:
+                    if (finalLocationForCurrent != null) {
+                        bundle.putDouble(RESULT_LAT, finalLocationForCurrent.latitude);
+                        bundle.putDouble(RESULT_LNG, finalLocationForCurrent.longitude);
+                        intent = new Intent(this, MainActivity.class);
+                        intent.putExtras(bundle);
+                        setResult(Activity.RESULT_OK, intent);
+                        finish();
 
-                    bundle.putDouble(RESULT_LAT,finalLocationForCurrent.latitude);
-                    bundle.putDouble(RESULT_LNG,finalLocationForCurrent.longitude);
-
-                    intent = new Intent(this, MainActivity.class);
-                    intent.putExtras(bundle);
-                    setResult(Activity.RESULT_OK,intent);
-                    finish();
+                    } else {
+                        Toast.makeText(this, "Ensure to choose a location", Toast.LENGTH_SHORT).show();
+                    }
                     break;
 
                 case WHERE_TO_CHOOSE_LOCATION:
-                    bundle.putDouble(RESULT_LAT,finalLocationForWhereTo.latitude);
-                    bundle.putDouble(RESULT_LNG,finalLocationForWhereTo.longitude);
 
-                    intent = new Intent(this, MainActivity.class);
-                    intent.putExtras(bundle);
-                    setResult(Activity.RESULT_OK,intent);
-                    finish();
+
+                    if (finalLocationForWhereTo != null) {
+                        bundle.putDouble(RESULT_LAT, finalLocationForWhereTo.latitude);
+                        bundle.putDouble(RESULT_LNG, finalLocationForWhereTo.longitude);
+                        intent = new Intent(this, MainActivity.class);
+                        intent.putExtras(bundle);
+                        setResult(Activity.RESULT_OK, intent);
+                        finish();
+
+                    } else {
+                        Toast.makeText(this, "Ensure to choose a location", Toast.LENGTH_SHORT).show();
+                    }
                     break;
                 case SET_ON_MAP_CHOOSE_LOCATION:
+                    if (finalLocationForSavedPlaces != null) {
+                        intent = new Intent(this, SavedPlaces.class);
+                        intent.putExtra(RESULT_SAVED_PLACES, finalLocationForSavedPlaces);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(this, "Ensure to choose a location", Toast.LENGTH_SHORT).show();
+                    }
+
                     finish();
-                    intent = new Intent(this, SavedPlaces.class);
-                    intent.putExtra(RESULT_SAVED_PLACES, finalLocationForSavedPlaces);
-                    startActivity(intent);
                     break;
                 case DELIVER_WHERE_CHOOSE_LOCATION:
-                    bundle.putDouble(RESULT_LAT,finalLocationForWhereDeliver.latitude);
-                    bundle.putDouble(RESULT_LNG , finalLocationForWhereDeliver.longitude);
+                    if (finalLocationForWhereDeliver.latitude != 0 && finalLocationForWhereDeliver.longitude != 0) {
+                        bundle.putDouble(RESULT_LAT, finalLocationForWhereDeliver.latitude);
+                        bundle.putDouble(RESULT_LNG, finalLocationForWhereDeliver.longitude);
+                        intent = new Intent(this, Delivery.class);
+                        intent.putExtras(bundle);
+                        setResult(Activity.RESULT_OK, intent);
+                        finish();
 
-                    intent = new Intent(this, Delivery.class);
-                    intent.putExtras(bundle);
-                    setResult(Activity.RESULT_OK,intent);
-                    finish();
+                    } else {
+                        Toast.makeText(this, "Ensure to choose a location", Toast.LENGTH_SHORT).show();
+                    }
                     break;
 
                 case DELIVER_TO_CHOOSE_LOCATION:
-                    bundle.putDouble(RESULT_LAT,finalLocationForToDeliver.latitude);
-                    bundle.putDouble(RESULT_LNG , finalLocationForToDeliver.longitude);
-
-                    intent = new Intent(this, Delivery.class);
-                    intent.putExtras(bundle);
-                    setResult(Activity.RESULT_OK,intent);
-                    finish();
+                    if (finalLocationForToDeliver.longitude != 0 && finalLocationForToDeliver.latitude != 0) {
+                        bundle.putDouble(RESULT_LAT, finalLocationForToDeliver.latitude);
+                        bundle.putDouble(RESULT_LNG, finalLocationForToDeliver.longitude);
+                        intent = new Intent(this, Delivery.class);
+                        intent.putExtras(bundle);
+                        setResult(Activity.RESULT_OK, intent);
+                        finish();
+                    }else {
+                        Toast.makeText(this, "Ensure to choose a location", Toast.LENGTH_SHORT).show();
+                    }
                     break;
 
             }
@@ -148,9 +170,7 @@ public class ChooseYourLocation extends AppCompatActivity {
     }
 
     private void goToMyCurrentLocation() {
-        ivGps.setOnClickListener(view -> {
-            moveCamera(latLngMyLocation, ZOOM, "here");
-        });
+        ivGps.setOnClickListener(view -> moveCamera(latLngMyLocation, ZOOM, "here"));
     }
 //        search.setAdapter(new PlaceAutoSuggestAdapter(this, android.R.layout.simple_list_item_1));
 
@@ -168,7 +188,7 @@ public class ChooseYourLocation extends AppCompatActivity {
 //                    Log.d("Feature : ", "" + address.getFeatureName());
 //                    Log.d("More : ", "" + address.getLocality());
 //                } else {
-//                    Log.d("Adddress", "Address Not Found");
+//                    Log.d("Address", "Address Not Found");
 //                }
 //            } else {
 //                Log.d("Lat Lng", "Lat Lng Not Found");
@@ -241,7 +261,7 @@ public class ChooseYourLocation extends AppCompatActivity {
 
                         //to zoom the map
                         googleMap.setMyLocationEnabled(true);
-                        moveCamera(latLngMyLocation, 15, "My Location");
+                        moveCamera(latLngMyLocation, ZOOM, "My Location");
 
                         //to change the marker when click
                         changeMarkerPosition();

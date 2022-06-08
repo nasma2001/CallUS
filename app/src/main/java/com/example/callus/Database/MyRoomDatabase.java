@@ -12,11 +12,11 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {UserInfo.class, SavedPlacesModel.class, MyTrips.class, PaymentMethod.class}
-        , version = 5
+@Database(entities = {UserInfo.class, SavedPlacesModel.class, MyTrips.class, PaymentMethod.class,
+        Requests.class,RequestRide.class}
+        , version = 16
         , exportSchema = false)
 public abstract class MyRoomDatabase extends RoomDatabase {
-
     public abstract UserInfoDAO userInfoDAO();
 
     public abstract SavedPlacesModelDAO savedPlacesModelDAO();
@@ -25,8 +25,13 @@ public abstract class MyRoomDatabase extends RoomDatabase {
 
     public abstract PaymentMethodDOA paymentMethodDOA();
 
+    public abstract RequestsDAO requestsDAO();
+
+    public abstract RequestRideDAO requestRideDAO();
+
+
     private static volatile MyRoomDatabase INSTANCE;
-    private static final int NUMBER_OF_THREADS = 4;
+    private static final int NUMBER_OF_THREADS = 5;
     static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     static MyRoomDatabase getDatabase(final Context context) {

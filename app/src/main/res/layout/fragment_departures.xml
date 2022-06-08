@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.BottomNavFragments.Departures.Departures">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -68,7 +69,7 @@
             app:drawableTint="@color/grayLines" />
 
         <Button
-            android:id="@+id/btnSearch"
+            android:id="@+id/btnRequestNow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/requestNow"
@@ -85,6 +86,29 @@
             app:layout_constraintStart_toStartOf="@id/etCurrentLocation"
             app:layout_constraintEnd_toEndOf="@id/etCurrentLocation"
             />
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/btnRequestNow"
+            app:layout_constraintTop_toBottomOf="@id/btnRequestNow"
+            app:layout_constraintEnd_toEndOf="@id/btnRequestNow"
+            android:layout_marginTop="80dp"
+            android:textSize="27sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvDistance"
+            app:layout_constraintTop_toBottomOf="@id/tvDistance"
+            app:layout_constraintEnd_toEndOf="@id/tvDistance"
+            android:layout_marginTop="20dp"
+            android:textSize="27sp"
+            android:textColor="@color/black"
+            app:drawableTint="@color/black" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

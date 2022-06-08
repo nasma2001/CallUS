@@ -2,7 +2,7 @@
 <resources>
 
 
-    <string name="app_name">اتصل</string>
+    <string name="app_name"> اتصل بنا</string>
 
     //texts for entering phone number for registration
     <string name="welcomeToAddNumber">أدخل رَقمك </string>
@@ -34,11 +34,15 @@
     <string name="now">الآن</string>
     <string name="requestNow"> أطلب الآن</string>
     <string name="setLocation">إختر المكان</string>
+    <string name="price">السعر: </string>
+    <string name="distance">المسافة: </string>
 
 
-    <string name="from"> من </string>
-    <string name="to"> إلى </string>
-    <string name="when"> متى </string>
+
+
+    <string name="from"> من : </string>
+    <string name="to"> إلى : </string>
+    <string name="when"> متى : </string>
     <string name="choose_the_way"> إختر الطريقة </string>
 
     <string name="enterAdress">أدخل العنوان، المدينة، الكود</string>
@@ -116,18 +120,6 @@
     <string name="payment">طرق الدفع</string>
     <string name="addPayment">إضافة طريقة للدفع</string>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <string name="myTrips">رحلاتي</string>
 
 </resources>

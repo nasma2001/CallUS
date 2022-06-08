@@ -47,10 +47,10 @@ public class MainFragment extends Fragment {
     FusedLocationProviderClient client;
     SupportMapFragment supportMapFragment;
     Boolean permission = false;
-    LocationRequest locationRequest;
+    LocationRequest locationRequest;// عشان يشغل الجي بي اس
     LocationManager locationManager;
     LocationListener locationListener;
-    double longitude, latitude;
+    double longitude, latitude; //خطوط طول وعرض
     String provider;
 
     public MainFragment() {
@@ -109,23 +109,27 @@ public class MainFragment extends Fragment {
 
             //update location
             updateLocation();
-            locationManager.requestLocationUpdates(provider, 1000, 0, locationListener);
+            if (permission) {
+                //تحديث موقع
+                locationManager.requestLocationUpdates(provider, 1000, 0, locationListener);
+                client = LocationServices.getFusedLocationProviderClient(getActivity());
+                //اخر موقع كنتي فيه وانتي مشغلة الجي بي اس
+                Location mLocation = locationManager.getLastKnownLocation(provider);
+                if (mLocation != null) {
+                    supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.fcvMap);
+                    if (supportMapFragment != null) {
+                        supportMapFragment.getMapAsync(googleMap -> {
+                            LatLng latLng = new LatLng(mLocation.getLatitude()
+                                    , mLocation.getLongitude());
+                            googleMap.setMyLocationEnabled(true);
 
-            client = LocationServices.getFusedLocationProviderClient(getActivity());
-            Location mLocation = locationManager.getLastKnownLocation(provider);
-            if (mLocation != null) {
-                supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.fcvMap);
-                if (supportMapFragment != null) {
-                    supportMapFragment.getMapAsync(googleMap -> {
-                        LatLng latLng = new LatLng(mLocation.getLatitude()
-                                , mLocation.getLongitude());
-                        googleMap.setMyLocationEnabled(true);
-
-                        //to zoom the map
-                        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
-                    });
+                            //to zoom the map
+                            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+                        });
+                    }
                 }
             }
+
         }
     }
 
@@ -138,13 +142,14 @@ public class MainFragment extends Fragment {
 
     private void prepareSettingForGPS() {
         locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-        Criteria crta = new Criteria();
-        crta.setAccuracy(Criteria.ACCURACY_FINE);
-        crta.setAltitudeRequired(true);
-        crta.setBearingRequired(true);
-        crta.setCostAllowed(true);
-        crta.setPowerRequirement(Criteria.POWER_LOW);
-        provider = locationManager.getBestProvider(crta, true);
+        // الكود هاد كلو عشان يجيبلي الموقع بالزبط
+        Criteria criteria = new Criteria();
+        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+        criteria.setAltitudeRequired(true);
+        criteria.setBearingRequired(true);
+        criteria.setCostAllowed(true);
+        criteria.setPowerRequirement(Criteria.POWER_LOW);
+        provider = locationManager.getBestProvider(criteria, true);
     }
 
     protected void createLocationRequest() {
@@ -173,7 +178,7 @@ public class MainFragment extends Fragment {
 
                 //device location is on
                 if (manager.isProviderEnabled(LocationManager.GPS_PROVIDER))
-                    initMap();
+                    initMap(); //تحدث الخريطة
             }
 
             //device location is off
@@ -194,9 +199,8 @@ public class MainFragment extends Fragment {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 1) {
-            if (permissions[0].equals(FINE_LOCATION)&& permissions.length>0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        if (requestCode == 1 && permissions.length > 0) {
+            if (permissions[0].equals(FINE_LOCATION) && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 permission = true;
             } else
                 requestPermissions(new String[]{FINE_LOCATION}, 1);

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".UI.profile.AddPayment">
+
+    <include
+        layout="@layout/app_bar_main"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/creditDebit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credit"
+        android:textSize="27sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="20dp"
+        android:drawablePadding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableStartCompat="@drawable/ic_credit_card" />
+    <TextView
+        android:id="@+id/tvPayPal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paypal"
+        android:textSize="27sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:drawablePadding="10dp"
+        app:layout_constraintStart_toStartOf="@id/creditDebit"
+        app:layout_constraintTop_toBottomOf="@id/creditDebit"
+        app:drawableStartCompat="@drawable/ic_paypal" />
+    <TextView
+        android:id="@+id/tvGPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gPay"
+        android:textSize="27sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:drawablePadding="10dp"
+        app:layout_constraintStart_toStartOf="@id/tvPayPal"
+        app:layout_constraintTop_toBottomOf="@id/tvPayPal"
+        app:drawableStartCompat="@drawable/ic_google_pay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

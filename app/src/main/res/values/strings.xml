@@ -32,10 +32,12 @@
     <string name="now">Now</string>
     <string name="requestNow">Request Now</string>
     <string name="setLocation">Set Location</string>
+    <string name="price">Price: </string>
+    <string name="distance">Distance: </string>
     //
-    <string name="from"> From </string>
-    <string name="to"> To </string>
-    <string name="when"> When </string>
+    <string name="from"> From : </string>
+    <string name="to"> To : </string>
+    <string name="when"> When : </string>
     <string name="choose_the_way"> Choose the way </string>
 
     //
@@ -107,10 +109,15 @@
     <string name="cash">Cash</string>
     <string name="payment">Payment Method</string>
     <string name="addPayment">Add Payment Method</string>
+    
+    //addPayment
+    <string name="credit" translatable="false">Credit or Debit Card</string>
+    <string name="paypal" translatable="false">PayPal</string>
+    <string name="gPay" translatable="false">Google Pay</string>
 
-
-
-
+    <string name="myTrips">My Trips</string>
+    
+    
 
 
 

@@ -145,4 +145,5 @@ public class SavedPlaces extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
 }

@@ -39,7 +39,7 @@ public class SendVCode extends AppCompatActivity {
         //when button continue clicked , it will send u a verification code
         btnContinue.setOnClickListener(view -> {
             if (etPhoneNumber.getText().toString().length() == 9) {
-                String phone = '0'+etPhoneNumber.getText().toString();
+                String phone = etPhoneNumber.getText().toString();
                 progressBar.setVisibility(View.VISIBLE);
                 btnContinue.setVisibility(View.INVISIBLE);
                 firebasePhoneNumAuth(phone,SendVCode.this,mCallbacks);
@@ -95,7 +95,7 @@ public class SendVCode extends AppCompatActivity {
             progressBar.setVisibility(View.GONE);
             btnContinue.setVisibility(View.VISIBLE);
             Intent i = new Intent(SendVCode.this, VerifyVCode.class);
-            i.putExtra("phone",'0'+etPhoneNumber.getText().toString());
+            i.putExtra("phone",etPhoneNumber.getText().toString());
             i.putExtra("verificationId", verificationId);
             startActivity(i);
         }

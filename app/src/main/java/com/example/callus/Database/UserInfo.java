@@ -13,16 +13,17 @@ public class UserInfo {
     String phone;
     long dateJoined;
 
-    public UserInfo(String phone) {
+    public UserInfo(@NonNull String phone) {
         this.phone = phone;
         this.dateJoined = new Date().getTime();
     }
 
+    @NonNull
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(@NonNull String phone) {
         this.phone = phone;
     }
 

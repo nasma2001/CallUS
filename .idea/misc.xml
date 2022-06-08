@@ -45,7 +45,8 @@
         <entry key="..\:/CallUS/app/src/main/res/drawable/tv_stroke.xml" value="0.2203125" />
         <entry key="..\:/CallUS/app/src/main/res/layout-v23/activity_profile_info.xml" value="0.20416666666666666" />
         <entry key="..\:/CallUS/app/src/main/res/layout-v23/fragment_plan.xml" value="0.18568840579710144" />
-        <entry key="..\:/CallUS/app/src/main/res/layout/activity_add_phone_number.xml" value="0.25" />
+        <entry key="..\:/CallUS/app/src/main/res/layout/activity_add_payment.xml" value="0.20416666666666666" />
+        <entry key="..\:/CallUS/app/src/main/res/layout/activity_add_phone_number.xml" value="0.22" />
         <entry key="..\:/CallUS/app/src/main/res/layout/activity_choose_your_location.xml" value="0.1" />
         <entry key="..\:/CallUS/app/src/main/res/layout/activity_deliver_with_us.xml" value="0.22" />
         <entry key="..\:/CallUS/app/src/main/res/layout/activity_delivery.xml" value="0.15172101449275363" />
@@ -90,6 +91,8 @@
         <entry key="..\:/CallUS/app/src/main/res/layout/fragment_services.xml" value="0.1" />
         <entry key="..\:/CallUS/app/src/main/res/layout/fragment_setting.xml" value="0.1" />
         <entry key="..\:/CallUS/app/src/main/res/layout/geo_search_result.xml" value="0.15172101449275363" />
+        <entry key="..\:/CallUS/app/src/main/res/layout/item_my_trips.xml" value="0.22" />
+        <entry key="..\:/CallUS/app/src/main/res/layout/item_my_trps.xml" value="0.19882246376811594" />
         <entry key="..\:/CallUS/app/src/main/res/layout/item_savedplace.xml" value="0.20416666666666666" />
         <entry key="..\:/CallUS/app/src/main/res/layout/nav_header.xml" value="0.15172101449275363" />
         <entry key="..\:/CallUS/app/src/main/res/layout/nav_hrader.xml" value="0.15172101449275363" />

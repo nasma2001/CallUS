@@ -21,6 +21,8 @@ public class Constants {
     public static final String RESULT_LNG = "resultLng";
     public static final String RESULT_SAVED_PLACES = "savedPlaceResult";
 
+    public final static String CHANNEL_ID = "firstChannel";
+
 
 
 }

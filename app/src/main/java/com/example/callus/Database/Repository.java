@@ -11,6 +11,8 @@ public class Repository {
     SavedPlacesModelDAO savedPlacesModelDAO;
     PaymentMethodDOA paymentMethodDOA;
     MyTripsDAO myTripsDAO;
+    RequestsDAO requestsDAO;
+    RequestRideDAO requestRideDAO;
 
     public Repository(Application application) {
         MyRoomDatabase db = MyRoomDatabase.getDatabase(application);
@@ -18,6 +20,8 @@ public class Repository {
         savedPlacesModelDAO = db.savedPlacesModelDAO();
         paymentMethodDOA = db.paymentMethodDOA();
         myTripsDAO = db.myTripsDAO();
+        requestsDAO = db.requestsDAO();
+        requestRideDAO = db.requestRideDAO();
     }
 
     // UserInfo DAO
@@ -53,6 +57,9 @@ public class Repository {
     public LiveData<List<SavedPlacesModel>> getAllSavedPlacesModel() {
         return savedPlacesModelDAO.getAllSavedPlacesModel();
     }
+    public void deletePlaceByID(int id){
+        MyRoomDatabase.databaseWriteExecutor.execute(()-> savedPlacesModelDAO.deletePlaceById(id));
+    }
 
     // PaymentMethod DOA
     public void insertPaymentMethod(PaymentMethod... PaymentMethod) {
@@ -71,6 +78,17 @@ public class Repository {
         return paymentMethodDOA.getAllPaymentMethod();
 
     }
+    public int getPaymentIDByCardNumber(String cardNum){
+        return paymentMethodDOA.getPaymentIDByCardNumber(cardNum);
+    }
+    public int getMoneyFromCardNumber(String cardNum){
+        return paymentMethodDOA.getMoneyFromCardNumber(cardNum);
+    }
+    public void updateMoney(String cardNum, int totalMoney){
+        MyRoomDatabase.databaseWriteExecutor.execute(() -> paymentMethodDOA.updateMoney(cardNum,totalMoney));
+    }
+
+
 
     // MyTripsDAO
     public void insertMyTrips(MyTrips... MyTrips) {
@@ -89,5 +107,33 @@ public class Repository {
         return myTripsDAO.getAllMyTrips();
     }
 
+    //requestsDao
 
+    public void insertRequest(Requests... requests){
+        MyRoomDatabase.databaseWriteExecutor.execute(()->requestsDAO.insertRequest(requests));
+    }
+    public void updateRequest(Requests... requests){
+        MyRoomDatabase.databaseWriteExecutor.execute(()->requestsDAO.updateRequest(requests));
+
+    }
+    public void deleteRequest(Requests... requests){
+        MyRoomDatabase.databaseWriteExecutor.execute(()->requestsDAO.deleteRequest(requests));
+
+    }
+    public LiveData<List<Requests>> getAllRequest(){return requestsDAO.getAllRequests();}
+
+    //requestRideDAO
+
+    public void insertRequestRide(RequestRide... requests){
+        MyRoomDatabase.databaseWriteExecutor.execute(()->requestRideDAO.insertRequest(requests));
+    }
+    public void updateRequestRide(RequestRide... requests){
+        MyRoomDatabase.databaseWriteExecutor.execute(()->requestRideDAO.updateRequest(requests));
+
+    }
+    public void deleteRequestRide(RequestRide... requests){
+        MyRoomDatabase.databaseWriteExecutor.execute(()->requestRideDAO.deleteRequest(requests));
+
+    }
+    public LiveData<List<RequestRide>> getAllRequestRide(){return requestRideDAO.getAllRequestRides();}
 }

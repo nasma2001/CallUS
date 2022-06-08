@@ -1,8 +1,10 @@
-package com.example.callus;
+package com.example.callus.UI.profile;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.callus.R;
 
 public class Help extends AppCompatActivity {
 

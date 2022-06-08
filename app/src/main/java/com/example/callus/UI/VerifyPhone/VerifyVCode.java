@@ -106,6 +106,7 @@ public class VerifyVCode extends AppCompatActivity {
     };
 
     private void verifyCode(String code){
+        //عشان يقارن بين الرقمين
         PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential(verificationId,code);
         signINByCredential(phoneAuthCredential);
     }
@@ -119,11 +120,14 @@ public class VerifyVCode extends AppCompatActivity {
 
                     if (task.isSuccessful()){
                         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
+                        //عشان ما يرجع يفتح صفحة الفيريفاي
                         getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                                 .edit().putBoolean("hasVerified",true).apply();
+                        //db تخزين
                         model = new ViewModelProvider(VerifyVCode.this).get(MyViewModel.class);
-                        UserInfo info = new UserInfo(Objects.requireNonNull(FirebaseAuth.getInstance()
-                                .getCurrentUser()).getPhoneNumber());
+                        String phone = Objects.requireNonNull(FirebaseAuth.getInstance()
+                                .getCurrentUser().getPhoneNumber());
+                        UserInfo info = new UserInfo(phone);
                         model.insertUserInfo(info);
                         Intent i = new Intent(this, MainActivity.class);
                         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

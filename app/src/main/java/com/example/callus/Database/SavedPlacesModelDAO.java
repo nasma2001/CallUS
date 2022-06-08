@@ -18,5 +18,8 @@ public interface SavedPlacesModelDAO {
     void deleteSavedPlacesModel(SavedPlacesModel... SavedPlacesModel);
     @Query("select * from `Saved Places`")
     LiveData<List<SavedPlacesModel>> getAllSavedPlacesModel();
+    @Query("delete from `Saved Places` where id = :id")
+    void deletePlaceById(int id);
+
 
 }

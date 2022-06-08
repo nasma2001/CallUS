@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Trips">
+    android:background="@color/backgroundColor"
+    tools:context=".UI.profile.Trips">
+    <include layout="@layout/app_bar_main" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTrips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

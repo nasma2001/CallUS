@@ -1,4 +1,4 @@
-package com.example.callus;
+package com.example.callus.UI.profile;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.callus.R;
 import com.google.firebase.auth.FirebaseAuth;
-
-import java.util.Objects;
 
 public class ProfileInfo extends AppCompatActivity {
     TextView tvPhoneNum, tvMassages, tvSettings;
@@ -22,7 +21,10 @@ public class ProfileInfo extends AppCompatActivity {
 
         //inflate views
         inflate();
-        tvPhoneNum.setText(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getPhoneNumber());
+
+        if (FirebaseAuth.getInstance().getCurrentUser()!=null){
+            tvPhoneNum.setText(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber());
+        }
         //initiate listeners
         initListeners();
     }
